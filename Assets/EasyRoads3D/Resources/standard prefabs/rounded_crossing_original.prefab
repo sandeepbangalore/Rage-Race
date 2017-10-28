@@ -1,0 +1,544 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  - component: {fileID: 3300000}
+  - component: {fileID: 2300000}
+  - component: {fileID: 6400000}
+  m_Layer: 0
+  m_Name: rounded_crossing_original
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2300000
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &3300000
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Mesh: {fileID: 4300000, guid: a3da557aacb32764e984895e2934b32b, type: 2}
+--- !u!64 &6400000
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: a3da557aacb32764e984895e2934b32b, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b0fc93600560c4eae025146be9912c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crossingElements:
+  - centerPoint: {x: 6.4683, y: 0, z: 0.027549982}
+    tmpCenterPoint: {x: 0, y: 0, z: 0}
+    stageCenterPoint: {x: 6.4683, y: 0.027549982, z: 0}
+    tmpStageCenterPoint: {x: 6.4683, y: 0.027551113, z: 0}
+    connectionVecs: []
+    connectionVecInts: 3400000033000000
+    blendData: []
+    controlPointV3: {x: 1.9684145, y: 0, z: 0}
+    controlPoint: {x: 1.9684145, y: 0}
+    blendDistance: 4.5
+    extendBounds: 1.5
+    blendCornerPoints:
+    - {x: 6.496781, y: -3.9723606, z: 0}
+    - {x: 1.9968953, y: -4.0044017, z: 0}
+    - {x: 1.9399338, y: 3.9954221, z: 0}
+    - {x: 6.4398193, y: 4.027463, z: 0}
+    blendCornerPointInts: 1b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003e0000003f000000460000004700000048000000490000004a0000004b000000500000005d0000005e0000005f00000060000000610000006300000034000000
+    blendCornerPointWeights:
+    - 0.1353021
+    - 0.14030598
+    - 0.22873811
+    - 0.2324646
+    - 0.1443238
+    - 0.28992903
+    - 0.22341302
+    - 0.3727524
+    - 0.34221408
+    - 0.45625255
+    - 0.4528942
+    - 0.3386704
+    - 0.45279557
+    - 0.22343619
+    - 0.28002426
+    - 0.21337788
+    - 0.3627433
+    - 0.33274344
+    - 0.44611937
+    - 0.4429214
+    - 0.7608559
+    - 0.76086915
+    - 0.7554468
+    - 0.7554336
+    - 1.0036168
+    - 0.0013350928
+    - 0.11198566
+    - 0.12522362
+    - 0.018838365
+    - 0.16128664
+    - 0.06645043
+    - 0.21337788
+    - 0.1353021
+    - 0.1443238
+    - 0.07574806
+    - 0.17169966
+    - 0.22341302
+    - 0.13627149
+    - 0.028825596
+    - 0.012396712
+    - 1
+    blendCornerPointsTransformed:
+    - {x: 631.78625, y: 502.82315, z: 0}
+    - {x: 449.14212, y: 504.12366, z: 0}
+    - {x: 446.8301, y: 179.42183, z: 0}
+    - {x: 629.4743, y: 178.12134, z: 0}
+    blendRatio: 1
+    curveStrength: 0
+    roadShapeVecs:
+    - {x: -2.5000134, y: 0}
+    - {x: 2.5000129, y: 0}
+    roadShapeUVY: []
+    outerVecInts: 
+    rotationPriority: 0
+    connectedRoad: {fileID: 0}
+    connectedMarker: -1
+    roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  - centerPoint: {x: 0.0055999756, y: 0, z: -6.3718004}
+    tmpCenterPoint: {x: 0, y: 0, z: 0}
+    stageCenterPoint: {x: 0.0055999756, y: -6.3718004, z: 0}
+    tmpStageCenterPoint: {x: 0.0056010894, y: -6.3718004, z: 0}
+    connectionVecs: []
+    connectionVecInts: 3700000039000000
+    blendData: []
+    controlPointV3: {x: 0, y: 0, z: 0}
+    controlPoint: {x: 0, y: 0}
+    blendDistance: 0
+    extendBounds: 0
+    blendCornerPoints:
+    - {x: -2.4943988, y: -6.3751006, z: 0}
+    - {x: -2.4943988, y: -6.3751006, z: 0}
+    - {x: 2.5056012, y: -6.3684998, z: 0}
+    - {x: 2.5056012, y: -6.3684998, z: 0}
+    blendCornerPointInts: 3700000039000000
+    blendCornerPointWeights:
+    - 1
+    - 1
+    blendCornerPointsTransformed:
+    - {x: 266.84668, y: 600.34705, z: 0}
+    - {x: 266.84668, y: 600.34705, z: 0}
+    - {x: 469.7898, y: 600.07916, z: 0}
+    - {x: 469.7898, y: 600.07916, z: 0}
+    blendRatio: 1
+    curveStrength: 0
+    roadShapeVecs:
+    - {x: -2.5000021, y: 0}
+    - {x: 2.5000021, y: 0}
+    roadShapeUVY: []
+    outerVecInts: 
+    rotationPriority: 1
+    connectedRoad: {fileID: 0}
+    connectedMarker: -1
+    roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  - centerPoint: {x: -6.84225, y: 0, z: -0.06704998}
+    tmpCenterPoint: {x: 0, y: 0, z: 0}
+    stageCenterPoint: {x: -6.84225, y: -0.06704998, z: 0}
+    tmpStageCenterPoint: {x: -6.84225, y: -0.06705118, z: 0}
+    connectionVecs: []
+    connectionVecInts: 0200000004000000
+    blendData: []
+    controlPointV3: {x: -1.942373, y: 0, z: 0}
+    controlPoint: {x: -1.942373, y: 0}
+    blendDistance: 4.9
+    extendBounds: 1.5
+    blendCornerPoints:
+    - {x: -6.870651, y: 3.932861, z: 0}
+    - {x: -1.9707737, y: 3.9676518, z: 0}
+    - {x: -1.9139724, y: -4.032172, z: 0}
+    - {x: -6.8138494, y: -4.066963, z: 0}
+    blendCornerPointInts: 0000000001000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000003b0000003c000000400000004100000042000000430000004400000045000000530000005400000055000000560000005700000058000000590000005a00000002000000
+    blendCornerPointWeights:
+    - 0.79312485
+    - 0.7931148
+    - 0.798318
+    - 1.0033687
+    - 0.7983284
+    - 0.41574436
+    - 0.41278416
+    - 0.42161524
+    - 0.42171806
+    - 0.42477918
+    - 0.33908653
+    - 0.31152412
+    - 0.2630532
+    - 0.21104398
+    - 0.20178582
+    - 0.13009736
+    - 0.3480731
+    - 0.32007757
+    - 0.271988
+    - 0.21924998
+    - 0.21091618
+    - 0.1382822
+    - 0.31681183
+    - 0.2158377
+    - 0.13460372
+    - 0.11947094
+    - 0.017107224
+    - 0.13088478
+    - 0.03223457
+    - 0.16339388
+    - 0.07533886
+    - 0.21091618
+    - 0.1382822
+    - 0.0668254
+    - 0.13009736
+    - 0.15391073
+    - 0.20178582
+    - 0.120801926
+    - 0.02306619
+    - 0.1086015
+    - 0.006947899
+    - 1
+    blendCornerPointsTransformed:
+    - {x: 89.22063, y: 181.9611, z: 0}
+    - {x: 288.09988, y: 180.549, z: 0}
+    - {x: 290.40536, y: 505.25082, z: 0}
+    - {x: 91.526115, y: 506.66296, z: 0}
+    blendRatio: 1
+    curveStrength: 0
+    roadShapeVecs:
+    - {x: -2.5000129, y: 0}
+    - {x: 2.5000129, y: 0}
+    roadShapeUVY: []
+    outerVecInts: 
+    rotationPriority: 0
+    connectedRoad: {fileID: 0}
+    connectedMarker: -1
+    roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  - centerPoint: {x: -0.0057001114, y: 0, z: 6.20605}
+    tmpCenterPoint: {x: 0, y: 0, z: 0}
+    stageCenterPoint: {x: -0.0057001114, y: 6.20605, z: 0}
+    tmpStageCenterPoint: {x: -0.0057011964, y: 6.20605, z: 0}
+    connectionVecs: []
+    connectionVecInts: 6900000068000000
+    blendData: []
+    controlPointV3: {x: 0, y: 0, z: 0}
+    controlPoint: {x: 0, y: 0}
+    blendDistance: 0
+    extendBounds: 0
+    blendCornerPoints: []
+    blendCornerPointInts: 
+    blendCornerPointWeights: []
+    blendCornerPointsTransformed: []
+    blendRatio: 1
+    curveStrength: 0
+    roadShapeVecs:
+    - {x: -2.5000002, y: 0}
+    - {x: 2.5000002, y: 0}
+    roadShapeUVY: []
+    outerVecInts: 
+    rotationPriority: 1
+    connectedRoad: {fileID: 0}
+    connectedMarker: -1
+    roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
+  meshVecs:
+  - {x: -5.8587, y: 0, z: 2.4399}
+  - {x: -5.8551, y: 0, z: 1.9399}
+  - {x: -6.86, y: 0, z: 2.4329}
+  - {x: -5.8267, y: 0, z: -2.0599}
+  - {x: -6.8245, y: 0, z: -2.567}
+  - {x: -5.8232, y: 0, z: -2.56}
+  - {x: -4.0037, y: 0, z: 2.4531}
+  - {x: -3.9856, y: 0, z: 1.9534}
+  - {x: -4.0013, y: 0, z: -0.0469}
+  - {x: -3.9876, y: 0, z: -2.0471}
+  - {x: -3.999, y: 0, z: -2.547}
+  - {x: -3.6273, y: 0, z: 2.5134}
+  - {x: -3.4884, y: 0, z: 2.033}
+  - {x: -3.2547, y: 0, z: 2.6765}
+  - {x: -2.996, y: 0, z: 2.2487}
+  - {x: -2.9552, y: 0, z: 2.9121}
+  - {x: -2.6003, y: 0, z: 2.56}
+  - {x: -3.624, y: 0, z: -2.6023}
+  - {x: -3.4907, y: 0, z: -2.1205}
+  - {x: -3.2513, y: 0, z: -2.7608}
+  - {x: -2.9968, y: 0, z: -2.3305}
+  - {x: -2.9514, y: 0, z: -2.9925}
+  - {x: -2.5992, y: 0, z: -2.6375}
+  - {x: -3.4895, y: 0, z: -0.0433}
+  - {x: -2.9964, y: 0, z: -0.0398}
+  - {x: -2.5997, y: 0, z: -0.037}
+  - {x: -0.0014, y: 0, z: -0.0185}
+  - {x: 2.5979, y: 0, z: -2.5967}
+  - {x: 2.5975, y: 0, z: 0}
+  - {x: 2.994, y: 0, z: 0.0029}
+  - {x: 2.9944, y: 0, z: 2.2934}
+  - {x: 2.597, y: 0, z: 2.6004}
+  - {x: 3.249, y: 0, z: 2.7238}
+  - {x: 2.9491, y: 0, z: 2.9554}
+  - {x: 3.6215, y: 0, z: 2.5653}
+  - {x: 3.488, y: 0, z: 2.0835}
+  - {x: 3.9963, y: 0, z: 2.51}
+  - {x: 3.9848, y: 0, z: 2.0102}
+  - {x: 3.4869, y: 0, z: 0.0064}
+  - {x: 3.9986, y: 0, z: 0.01}
+  - {x: 2.9937, y: 0, z: -2.2855}
+  - {x: 3.2523, y: 0, z: -2.7134}
+  - {x: 2.953, y: 0, z: -2.9489}
+  - {x: 3.6247, y: 0, z: -2.5503}
+  - {x: 3.4858, y: 0, z: -2.07}
+  - {x: 4.0008, y: 0, z: -2.4901}
+  - {x: 3.9828, y: 0, z: -1.9904}
+  - {x: 5.3656, y: 0, z: 2.0198}
+  - {x: 5.3621, y: 0, z: 2.5197}
+  - {x: 5.3941, y: 0, z: -1.9802}
+  - {x: 5.3976, y: 0, z: -2.4801}
+  - {x: 6.4505, y: 0, z: 2.5275}
+  - {x: 6.4861, y: 0, z: -2.4724}
+  - {x: -2.4958, y: 0, z: -5.3259}
+  - {x: -1.9958, y: 0, z: -5.3251}
+  - {x: -2.4944, y: 0, z: -6.3751}
+  - {x: 2.0042, y: 0, z: -5.3199}
+  - {x: 2.5056, y: 0, z: -6.3685}
+  - {x: 2.5042, y: 0, z: -5.3193}
+  - {x: -2.4974, y: 0, z: -4.0363}
+  - {x: -1.9976, y: 0, z: -4.0207}
+  - {x: 0.0026, y: 0, z: -4.0185}
+  - {x: 2.0028, y: 0, z: -3.9869}
+  - {x: 2.5026, y: 0, z: -4.0008}
+  - {x: -2.5558, y: 0, z: -3.6619}
+  - {x: -2.075, y: 0, z: -3.5245}
+  - {x: -2.7172, y: 0, z: -3.2906}
+  - {x: -2.289, y: 0, z: -3.0326}
+  - {x: -2.9514, y: 0, z: -2.9925}
+  - {x: -2.5992, y: 0, z: -2.6375}
+  - {x: 2.5597, y: 0, z: -3.624}
+  - {x: 2.0783, y: 0, z: -3.489}
+  - {x: 2.7199, y: 0, z: -3.2502}
+  - {x: 2.2898, y: 0, z: -2.995}
+  - {x: 2.953, y: 0, z: -2.9489}
+  - {x: 2.5979, y: 0, z: -2.5967}
+  - {x: 0.0021, y: 0, z: -3.5068}
+  - {x: 0.0016, y: 0, z: -3.0138}
+  - {x: 0.0013, y: 0, z: -2.6172}
+  - {x: -0.0014, y: 0, z: -0.0185}
+  - {x: 2.597, y: 0, z: 2.6004}
+  - {x: -0.0035, y: 0, z: 2.5802}
+  - {x: -0.0038, y: 0, z: 2.9768}
+  - {x: -2.2921, y: 0, z: 2.9581}
+  - {x: -2.6003, y: 0, z: 2.56}
+  - {x: -2.722, y: 0, z: 3.2135}
+  - {x: -2.9552, y: 0, z: 2.9121}
+  - {x: -2.5619, y: 0, z: 3.5872}
+  - {x: -2.0805, y: 0, z: 3.4521}
+  - {x: -2.5046, y: 0, z: 3.9638}
+  - {x: -2.0048, y: 0, z: 3.9497}
+  - {x: -0.0042, y: 0, z: 3.4699}
+  - {x: -0.0046, y: 0, z: 3.9816}
+  - {x: 2.2867, y: 0, z: 2.9955}
+  - {x: 2.7151, y: 0, z: 3.2535}
+  - {x: 2.9491, y: 0, z: 2.9554}
+  - {x: 2.5536, y: 0, z: 3.6248}
+  - {x: 2.0728, y: 0, z: 3.4877}
+  - {x: 2.4954, y: 0, z: 3.9994}
+  - {x: 1.9956, y: 0, z: 3.9841}
+  - {x: -2.0052, y: 0, z: 5.1771}
+  - {x: -2.5052, y: 0, z: 5.1767}
+  - {x: 1.9948, y: 0, z: 5.179}
+  - {x: 2.4947, y: 0, z: 5.1793}
+  - {x: -2.5057, y: 0, z: 6.205}
+  - {x: 2.4943, y: 0, z: 6.2071}
+  tmpMeshVecs:
+  - {x: -5.8587, y: 0, z: 2.4399}
+  - {x: -5.8551, y: 0, z: 1.9399}
+  - {x: -6.86, y: 0, z: 2.4329}
+  - {x: -5.8267, y: 0, z: -2.0599}
+  - {x: -6.8245, y: 0, z: -2.567}
+  - {x: -5.8232, y: 0, z: -2.56}
+  - {x: -4.0037, y: 0, z: 2.4531}
+  - {x: -3.9856, y: 0, z: 1.9534}
+  - {x: -4.0013, y: 0, z: -0.0469}
+  - {x: -3.9876, y: 0, z: -2.0471}
+  - {x: -3.999, y: 0, z: -2.547}
+  - {x: -3.6273, y: 0, z: 2.5134}
+  - {x: -3.4884, y: 0, z: 2.033}
+  - {x: -3.2547, y: 0, z: 2.6765}
+  - {x: -2.996, y: 0, z: 2.2487}
+  - {x: -2.9552, y: 0, z: 2.9121}
+  - {x: -2.6003, y: 0, z: 2.56}
+  - {x: -3.624, y: 0, z: -2.6023}
+  - {x: -3.4907, y: 0, z: -2.1205}
+  - {x: -3.2513, y: 0, z: -2.7608}
+  - {x: -2.9968, y: 0, z: -2.3305}
+  - {x: -2.9514, y: 0, z: -2.9925}
+  - {x: -2.5992, y: 0, z: -2.6375}
+  - {x: -3.4895, y: 0, z: -0.0433}
+  - {x: -2.9964, y: 0, z: -0.0398}
+  - {x: -2.5997, y: 0, z: -0.037}
+  - {x: -0.0014, y: 0, z: -0.0185}
+  - {x: 2.5979, y: 0, z: -2.5967}
+  - {x: 2.5975, y: 0, z: 0}
+  - {x: 2.994, y: 0, z: 0.0029}
+  - {x: 2.9944, y: 0, z: 2.2934}
+  - {x: 2.597, y: 0, z: 2.6004}
+  - {x: 3.249, y: 0, z: 2.7238}
+  - {x: 2.9491, y: 0, z: 2.9554}
+  - {x: 3.6215, y: 0, z: 2.5653}
+  - {x: 3.488, y: 0, z: 2.0835}
+  - {x: 3.9963, y: 0, z: 2.51}
+  - {x: 3.9848, y: 0, z: 2.0102}
+  - {x: 3.4869, y: 0, z: 0.0064}
+  - {x: 3.9986, y: 0, z: 0.01}
+  - {x: 2.9937, y: 0, z: -2.2855}
+  - {x: 3.2523, y: 0, z: -2.7134}
+  - {x: 2.953, y: 0, z: -2.9489}
+  - {x: 3.6247, y: 0, z: -2.5503}
+  - {x: 3.4858, y: 0, z: -2.07}
+  - {x: 4.0008, y: 0, z: -2.4901}
+  - {x: 3.9828, y: 0, z: -1.9904}
+  - {x: 5.3656, y: 0, z: 2.0198}
+  - {x: 5.3621, y: 0, z: 2.5197}
+  - {x: 5.3941, y: 0, z: -1.9802}
+  - {x: 5.3976, y: 0, z: -2.4801}
+  - {x: 6.4505, y: 0, z: 2.5275}
+  - {x: 6.4861, y: 0, z: -2.4724}
+  - {x: -2.4958, y: 0, z: -5.3259}
+  - {x: -1.9958, y: 0, z: -5.3251}
+  - {x: -2.4944, y: 0, z: -6.3751}
+  - {x: 2.0042, y: 0, z: -5.3199}
+  - {x: 2.5056, y: 0, z: -6.3685}
+  - {x: 2.5042, y: 0, z: -5.3193}
+  - {x: -2.4974, y: 0, z: -4.0363}
+  - {x: -1.9976, y: 0, z: -4.0207}
+  - {x: 0.0026, y: 0, z: -4.0185}
+  - {x: 2.0028, y: 0, z: -3.9869}
+  - {x: 2.5026, y: 0, z: -4.0008}
+  - {x: -2.5558, y: 0, z: -3.6619}
+  - {x: -2.075, y: 0, z: -3.5245}
+  - {x: -2.7172, y: 0, z: -3.2906}
+  - {x: -2.289, y: 0, z: -3.0326}
+  - {x: -2.9514, y: 0, z: -2.9925}
+  - {x: -2.5992, y: 0, z: -2.6375}
+  - {x: 2.5597, y: 0, z: -3.624}
+  - {x: 2.0783, y: 0, z: -3.489}
+  - {x: 2.7199, y: 0, z: -3.2502}
+  - {x: 2.2898, y: 0, z: -2.995}
+  - {x: 2.953, y: 0, z: -2.9489}
+  - {x: 2.5979, y: 0, z: -2.5967}
+  - {x: 0.0021, y: 0, z: -3.5068}
+  - {x: 0.0016, y: 0, z: -3.0138}
+  - {x: 0.0013, y: 0, z: -2.6172}
+  - {x: -0.0014, y: 0, z: -0.0185}
+  - {x: 2.597, y: 0, z: 2.6004}
+  - {x: -0.0035, y: 0, z: 2.5802}
+  - {x: -0.0038, y: 0, z: 2.9768}
+  - {x: -2.2921, y: 0, z: 2.9581}
+  - {x: -2.6003, y: 0, z: 2.56}
+  - {x: -2.722, y: 0, z: 3.2135}
+  - {x: -2.9552, y: 0, z: 2.9121}
+  - {x: -2.5619, y: 0, z: 3.5872}
+  - {x: -2.0805, y: 0, z: 3.4521}
+  - {x: -2.5046, y: 0, z: 3.9638}
+  - {x: -2.0048, y: 0, z: 3.9497}
+  - {x: -0.0042, y: 0, z: 3.4699}
+  - {x: -0.0046, y: 0, z: 3.9816}
+  - {x: 2.2867, y: 0, z: 2.9955}
+  - {x: 2.7151, y: 0, z: 3.2535}
+  - {x: 2.9491, y: 0, z: 2.9554}
+  - {x: 2.5536, y: 0, z: 3.6248}
+  - {x: 2.0728, y: 0, z: 3.4877}
+  - {x: 2.4954, y: 0, z: 3.9994}
+  - {x: 1.9956, y: 0, z: 3.9841}
+  - {x: -2.0052, y: 0, z: 5.1771}
+  - {x: -2.5052, y: 0, z: 5.1767}
+  - {x: 1.9948, y: 0, z: 5.179}
+  - {x: 2.4947, y: 0, z: 5.1793}
+  - {x: -2.5057, y: 0, z: 6.205}
+  - {x: 2.4943, y: 0, z: 6.2071}
+  prefabId: -2147483648
+  prioritySegments: 
+  minNodeDistance: 3
+  nodeWithinRange: -1
+  sourceObject: {fileID: 100002, guid: f45b43d30111dd64595f7c7bb4d447da, type: 3}
+  meshInstance: 0
+  selectedConnection: -1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
