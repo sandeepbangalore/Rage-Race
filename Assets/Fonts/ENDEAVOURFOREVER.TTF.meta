@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8cc4b2288ef2047aba3a266b0bbbaf62
+timeCreated: 1510064465
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Endeavour forever
+  fontNames:
+  - Endeavour forever
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
