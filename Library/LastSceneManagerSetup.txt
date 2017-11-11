@@ -1,4 +1,13 @@
 sceneSetups:
 - path: Assets/Scene/menu.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/PlayerSelector/_Scene/PlayerSelector.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scene/track.unity
+  isLoaded: 1
+  isActive: 0
+- path: Assets/TeamLoadingScreen/Scene/TeamLoadingScreen.unity
   isLoaded: 1
   isActive: 1
