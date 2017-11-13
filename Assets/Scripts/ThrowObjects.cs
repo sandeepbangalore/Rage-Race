@@ -20,6 +20,7 @@ public class ThrowObjects : MonoBehaviour
     public GameObject ballPrefab;
     private Rigidbody rbody_ball;
     private GameObject heldBall = null;
+    private GameObject heldBall1 = null;
     private float beginTime = 0.0f;
 
 	// Use this for initialization
@@ -32,11 +33,15 @@ public class ThrowObjects : MonoBehaviour
 	void Update () 
 	{
 		if(beginTime != 0.0f && Time.timeSinceLevelLoad - beginTime >= 6)
-			Destroy(heldBall);
+		{
+            Destroy(heldBall);
+            Destroy(heldBall1);
+        }
 	}
 
-	void ExecuteThrowCallback()
+	void ExecuteThrowCallback(GameObject heldBall)
     {
+        rbody_ball = heldBall.GetComponent<Rigidbody>();
         // heldBall.transform.parent = null;
         rbody_ball.isKinematic = false;
 
@@ -74,11 +79,12 @@ public class ThrowObjects : MonoBehaviour
 		if (ballPrefab != null)
         {
           heldBall = Instantiate(ballPrefab, this.transform.position + new Vector3(0,5.0f,-this.transform.localScale.z/2), Quaternion.identity);
+          heldBall1 = Instantiate(ballPrefab, this.transform.position + new Vector3(0,5.0f,this.transform.localScale.z/2), Quaternion.identity);
           beginTime = Time.timeSinceLevelLoad;
-          rbody_ball = heldBall.GetComponent<Rigidbody>();
           // heldBall.transform.parent = leftHand;
           // rbody_ball.isKinematic = true;
-          ExecuteThrowCallback();
+          ExecuteThrowCallback(heldBall);
+          ExecuteThrowCallback(heldBall1);
         }
     }
 }
