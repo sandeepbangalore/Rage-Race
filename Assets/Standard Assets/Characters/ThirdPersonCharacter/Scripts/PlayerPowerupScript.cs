@@ -27,9 +27,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		moveScript = GetComponent<ThirdPersonCharacter> ();
-		
 	}
 	
 	// Update is called once per frame
@@ -43,11 +41,10 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 			if (timer >= maxTime) {
 				moveScript.speedPowerUp = 1.0f;
+				timer = 0;
+				speedUp = false;
 			}
-
 		}
-
-
 	}
 
 	void OnCollisionEnter(Collision collision) {

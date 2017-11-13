@@ -16,12 +16,9 @@ using UnityEngine;
 
 public class PowerupScript : MonoBehaviour {
 
-	public AudioSource sound;
-//	public ThirdPersonCharacter playerScript;
-
 	// Use this for initialization
 	void Start () {
-		sound = GetComponent<AudioSource> ();
+		
 	}
 	
 	// Update is called once per frame
@@ -31,14 +28,10 @@ public class PowerupScript : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision) {
 		if (collision.transform.gameObject.tag == "Player") {
-//			sound.Play ();
 
-//			playerScript = collision.transform.gameObject.GetComponent (ThirdPersonCharacter);
-//			playerScript.speedPowerUp = 2.0f;
-
-			//speedup
-
-
+			if (transform.parent.gameObject != null) {
+				Destroy (transform.parent.gameObject);
+			}
 			Destroy(gameObject);
 		}
 		
