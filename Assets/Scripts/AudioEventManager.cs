@@ -12,6 +12,7 @@ public class AudioEventManager : MonoBehaviour
     // public AudioClip playerDeathAudio;
 
     public AudioClip playerStepAudio;
+    public AudioClip powerUpAudio;
     // public AudioClip playerLaserStepAudio;
     // public AudioClip playerIceStepAudio;
 
@@ -32,6 +33,7 @@ public class AudioEventManager : MonoBehaviour
 
 
     private UnityAction<Vector3> playerStepEventListener;
+    private UnityAction<Vector3> powerUpEventListener;
     // private UnityAction<Vector3> playerLaserStepEventListener;
     // private UnityAction<Vector3> playerIceStepEventListener;
 
@@ -54,6 +56,7 @@ public class AudioEventManager : MonoBehaviour
         // playerDeathEventListener = new UnityAction<Vector3> (playerDeathEventHandler);
 
         playerStepEventListener = new UnityAction<Vector3>(playerStepEventHandler);
+        powerUpEventListener = new UnityAction<Vector3>(powerUpEventHandler);
         // playerLaserStepEventListener = new UnityAction<Vector3> (playerLaserStepHandler);
         // playerIceStepEventListener = new UnityAction<Vector3> (playerIceStepHandler);
 
@@ -64,11 +67,6 @@ public class AudioEventManager : MonoBehaviour
         // tireAudioEventListener = new UnityAction<Vector3> (tireAudioEventHandler);
         // hammerAudioEventListener = new UnityAction<Vector3> (hammerAudioEventHandler);
         // woodAudioEventListener = new UnityAction<Vector3> (woodAudioEventHandler);
-
-
-
-
-
 
     }
 
@@ -90,6 +88,7 @@ public class AudioEventManager : MonoBehaviour
 
 
         EventManager.StartListening<PlayerStepEvent, Vector3>(playerStepEventListener);
+        EventManager.StartListening<PowerUpEvent, Vector3>(powerUpEventListener);
         // EventManager.StartListening<PlayerLaserStepEvent,Vector3> (playerLaserStepEventListener);
         // EventManager.StartListening<PlayerIceStepEvent,Vector3> (playerIceStepEventListener);
 
@@ -114,6 +113,7 @@ public class AudioEventManager : MonoBehaviour
 
 
         EventManager.StopListening<PlayerStepEvent, Vector3>(playerStepEventListener);
+        EventManager.StopListening<PowerUpEvent, Vector3>(powerUpEventListener);
         // EventManager.StopListening<PlayerLaserStepEvent,Vector3> (playerLaserStepEventListener);
         // EventManager.StopListening<PlayerIceStepEvent,Vector3> (playerIceStepEventListener);
 
@@ -153,7 +153,14 @@ public class AudioEventManager : MonoBehaviour
     // }
     void playerStepEventHandler(Vector3 worldPos)
     {
-        AudioSource.PlayClipAtPoint(this.playerStepAudio, worldPos, 2f);
+        
+        AudioSource.PlayClipAtPoint(this.playerStepAudio, worldPos, 2.5f);
+    }
+
+    void powerUpEventHandler(Vector3 worldPos)
+    {
+
+        AudioSource.PlayClipAtPoint(this.powerUpAudio, worldPos, 2.5f);
     }
 
 

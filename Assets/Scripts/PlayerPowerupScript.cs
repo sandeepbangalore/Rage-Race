@@ -50,7 +50,8 @@ public class PlayerPowerupScript : MonoBehaviour {
 	void OnCollisionEnter(Collision collision) {
 		if (collision.transform.gameObject.tag == "Powerup") {
 
-			speedUp = true;
+            EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
+            speedUp = true;
 
 		}
 	}

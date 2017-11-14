@@ -22,7 +22,7 @@ public class ClickSound : MonoBehaviour {
 
     void  PlaySound ()
     {
-        source.PlayOneShot(sound);
+        source.PlayOneShot(sound, 0.6f);
     }
 	
 	// Update is called once per frame
