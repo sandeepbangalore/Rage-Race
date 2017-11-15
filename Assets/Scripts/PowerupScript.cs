@@ -27,7 +27,7 @@ public class PowerupScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		if (collision.transform.gameObject.tag == "Player") {
+		if (collision.transform.gameObject.tag == "Player" || collision.transform.gameObject.tag == "NPC") {
 
 			if (transform.parent.gameObject != null) {
 				Destroy (transform.parent.gameObject);

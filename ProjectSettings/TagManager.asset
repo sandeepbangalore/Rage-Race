@@ -7,6 +7,7 @@ TagManager:
   - Boost
   - grabbable
   - Powerup
+  - NPC
   layers:
   - Default
   - TransparentFX

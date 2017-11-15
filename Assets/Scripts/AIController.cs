@@ -16,6 +16,8 @@ public class AIController : MonoBehaviour
 
     }
 
+	public float speedPowerUp = 1f;
+
     public float moveSpeedMultiplier = 1f;
 
     private PositionManager positionManager;
@@ -38,7 +40,7 @@ public class AIController : MonoBehaviour
     {
 		if (MyGameManager.getGameState() != GameManager.States.Countdown)
         {
-            anim.speed = moveSpeedMultiplier;
+			anim.speed = moveSpeedMultiplier * speedPowerUp;
             return true;
         }
 		else

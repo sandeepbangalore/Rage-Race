@@ -20,14 +20,21 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 
 	private ThirdPersonCharacter moveScript;
-	public float maxTime = 5.0f;
+	private AIController AIscript;
+	public float maxTime = 1.0f;
 	private float timer;
 
 	private bool speedUp = false;
 
 	// Use this for initialization
 	void Start () {
-		moveScript = GetComponent<ThirdPersonCharacter> ();
+
+		if (gameObject.tag == "Player") {
+			moveScript = GetComponent<ThirdPersonCharacter> ();
+		} else if (gameObject.tag == "NPC") {
+			AIscript = GetComponent<AIController> ();
+		}
+
 	}
 	
 	// Update is called once per frame
@@ -35,14 +42,29 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 		if (speedUp == true) {
 
-			moveScript.speedPowerUp = 3.0f;
+			if (gameObject.tag == "Player") {
+				moveScript.speedPowerUp = 3.0f;
+			} else if (gameObject.tag == "NPC") {
+				AIscript.speedPowerUp = 3.0f;
+			}
+				
 
 			timer += Time.deltaTime;
 
 			if (timer >= maxTime) {
-				moveScript.speedPowerUp = 1.0f;
-				timer = 0;
-				speedUp = false;
+
+
+				if (speedUp == true) {
+
+					if (gameObject.tag == "Player") {
+						moveScript.speedPowerUp = 1.0f;
+					} else if (gameObject.tag == "NPC") {
+						AIscript.speedPowerUp = 1.0f;
+					}
+
+					timer = 0;
+					speedUp = false;
+				}
 			}
 		}
 	}
