@@ -13,7 +13,7 @@ public class PositionManager : MonoBehaviour {
     private int lapProgress = 1; // TODO: implement lap progress
     private int waypointProgress = 0;
     private Vector3 nextWaypoint;
-
+	private GameManager MyGameManager = null;
     private PositionManager[] runners;
     private bool isPlayer = false;
     private PositionManager playerPositionManager = null;
@@ -21,6 +21,8 @@ public class PositionManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+		MyGameManager = GameManager.Instance;
+
         // set midpoint waypoints if this script is attached to the player
         if (this.tag == "Player")
         {
@@ -215,5 +217,15 @@ public class PositionManager : MonoBehaviour {
         {
             updatePositionDisplay();
         }
+
+		if (MyGameManager.getGameState() == GameManager.States.Finish) {
+
+		}
+	}
+
+	public void finalResults()
+	{
+		System.Array.Sort (runners, sortByPosition);
+		MyGameManager.finalResults (runners);
 	}
 }

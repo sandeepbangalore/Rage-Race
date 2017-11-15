@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EndGame : MonoBehaviour {
-
+	public PositionManager player = null;
 	public Canvas Finish = null;
 	private GameManager MyGameManager = null;
 
@@ -28,6 +28,7 @@ public class EndGame : MonoBehaviour {
 			Debug.Log("Entered");
 			Finish.enabled = true; 
 			Finish.GetComponent<Animator> ().SetTrigger ("Finish");
+			player.finalResults ();
 			StartCoroutine (gameFinish ());
 		}
 	}

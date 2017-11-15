@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 	public enum States {Countdown, Race, Finish};
 	private States gameState = States.Countdown; 
-
+	private PositionManager[] results; 
 	private static GameManager _Instance = null;
 	public static GameManager Instance{
 		get{ 
@@ -22,7 +22,14 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (gameState == States.Finish) {
+			foreach (PositionManager runner in results) {
+				int place = System.Array.IndexOf (results, runner) + 1;
+				Debug.Log (place);
+				Debug.Log (runner.gameObject);
+
+			}
+		}
 	}
 
 	public void setGameState(States currentState){
@@ -31,5 +38,9 @@ public class GameManager : MonoBehaviour {
 
 	public States getGameState(){
 		return gameState;
+	}
+
+	public void finalResults(PositionManager[] runners){
+		results = runners; 
 	}
 }
