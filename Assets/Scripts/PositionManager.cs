@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class PositionManager : MonoBehaviour {
 
     public Text positionText;
-    private bool isPlayer = false;
 
     public Transform[] leftWaypoints;
     public Transform[] rightWaypoints;
@@ -16,10 +15,12 @@ public class PositionManager : MonoBehaviour {
     private Vector3 nextWaypoint;
 
     private PositionManager[] runners;
-    
+    private bool isPlayer = false;
+    private PositionManager playerPositionManager = null;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         // set midpoint waypoints if this script is attached to the player
         if (this.tag == "Player")
         {
@@ -49,7 +50,7 @@ public class PositionManager : MonoBehaviour {
 
             if (randWaypts)
             {
-                n = Random.Range(0.1f, 0.9f);
+                n = Random.Range(0.2f, 0.8f);
             }
 
             Vector3 waypt = Vector3.Lerp(leftWaypoints[i].position, rightWaypoints[i].position, n);
@@ -148,6 +149,56 @@ public class PositionManager : MonoBehaviour {
     public float getDistanceToNextWaypoint()
     {
         return (transform.position - nextWaypoint).magnitude;
+    }
+
+    // returns whether this runner is at least a given number of spaces behind the player
+    // can use either position/race rankings or waypoint progress
+    public bool isBehindPlayer(bool usingPosition, int spaces)
+    {
+        // grab the player position manager if not already stored
+        if (playerPositionManager == null)
+        {
+            foreach (PositionManager runner in runners)
+            {
+                if (runner.getIsPlayer())
+                {
+                    playerPositionManager = runner;
+                    break;
+                }
+            }
+        }
+
+        if (usingPosition)
+        {
+            System.Array.Sort(runners, sortByPosition);
+            int playerPosition = 0;
+            int runnerPosition = 0;
+
+            foreach (PositionManager runner in runners)
+            {
+                if (runner.getIsPlayer())
+                {
+                    playerPosition = System.Array.IndexOf(runners, runner);
+                }
+                if (runner == this)
+                {
+                    runnerPosition = System.Array.IndexOf(runners, runner);
+                }
+            }
+
+            //print("player position: " + playerPosition);
+            //print("runner position: " + runnerPosition);
+
+            return runnerPosition - playerPosition >= spaces;
+        }
+        else
+        {
+            // TODO currently does not consider laps
+            //print("my waypoint progress: " + getWaypointProgress());
+            //print("player waypoint progress: " + playerPositionManager.getWaypointProgress());
+            //print("should I warp? " + ((playerPositionManager.getWaypointProgress() - getWaypointProgress() >= spaces) ? "yes" : "no"));
+            return playerPositionManager.getWaypointProgress() - getWaypointProgress() >= spaces;
+        }
     }
 
     // return whether this GameObject is within a certain difference (distance) to a location loc

@@ -31,17 +31,42 @@ public class AIController : MonoBehaviour
     private AINavSteeringController aiSteer;
     private NavMeshAgent agent;
 
-    private bool isDebug = true;
+    private bool isDebug = false;
 
     // may change depending on how game start is implemented
     bool hasGameStarted()
     {
-		if (MyGameManager.getGameState() != GameManager.States.Countdown) 
-			return true; 
+		if (MyGameManager.getGameState() != GameManager.States.Countdown)
+        {
+            anim.speed = moveSpeedMultiplier;
+            return true;
+        }
 		else
 			return false;
         //return Time.timeSinceLevelLoad > 3.0f;
     }
+
+    bool hasGameEnded()
+    {
+        return MyGameManager.getGameState() == GameManager.States.Finish;
+    }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.impulse.magnitude > 15)
+    //    {
+    //        //debugPrint("collision impulse magnitude = " + collision.impulse.magnitude);
+    //        agent.enabled = false;
+    //        Invoke("reenableNavmeshAgent", 0.2f);
+    //    }
+    //}
+
+    //void reenableNavmeshAgent()
+    //{
+    //    agent.enabled = true;
+    //    aiSteer.clearWaypoints();
+    //    aiSteer.setWaypoint(nextWaypoint);
+    //}
 
 
     // Use this for initialization
@@ -52,7 +77,7 @@ public class AIController : MonoBehaviour
         // initialize nav mesh steering
         aiSteer = GetComponent<AINavSteeringController>();
         anim = GetComponent<Animator>();
-        anim.speed = moveSpeedMultiplier;
+        anim.speed += Random.Range(-0.3f, 0.3f);
         aiSteer.Init();
         aiSteer.waypointLoop = false;
         aiSteer.stopAtNextWaypoint = false;
@@ -88,11 +113,11 @@ public class AIController : MonoBehaviour
     void updateNextWaypoint()
     {
         Vector3 potentialNextWaypoint = positionManager.getNextWaypoint();
-        //if (nextWaypoint == null || potentialNextWaypoint != nextWaypoint)
         if (potentialNextWaypoint != nextWaypoint)
-            {
+        {
+            nextWaypoint = potentialNextWaypoint;
             aiSteer.clearWaypoints();
-            aiSteer.setWaypoint(potentialNextWaypoint);
+            aiSteer.setWaypoint(nextWaypoint);
         }
     }
 
@@ -103,22 +128,22 @@ public class AIController : MonoBehaviour
         return distance < difference;
     }
 
-    // if AI agent has not moved very far from their last recorded position, reset next waypoint.
+    // if AI agent has not moved very far from their last recorded position
+    // and it is at least 1 waypoint behind the player, warp to the next waypoint
     // also update last position
     void checkStuck()
     {
-        if (hasReachedTarget(lastLocation, 4f))
+        if (hasReachedTarget(lastLocation, 10f))
         {
-            // TODO: fix. maybe respawn?
             debugPrint("I'm stuck!" + transform.position);
+            debugPrint("I've passed waypoint " + positionManager.getWaypointProgress());
             debugPrint("next waypoint = " + nextWaypoint);
-            //agent.isStopped = true;
-            //GetComponent<Rigidbody>().velocity = Vector3.zero;
-            //aiSteer.clearWaypoints();
-            //aiSteer.prioritizeFaceWaypoint = true;
-            //agent.enabled = false;
-            //agent.enabled = true;
-            //aiSteer.setWaypoint(nextWaypoint);
+            
+            if (positionManager.isBehindPlayer(false, 1)) // check if agent is behind player using waypoints, not race position
+            {
+                debugPrint("I'm warping!!");
+                agent.Warp(nextWaypoint);
+            }
 
         }
         lastLocation = transform.position;
@@ -137,9 +162,12 @@ public class AIController : MonoBehaviour
                 checkStuck();
             }
         }
-        else
+        else if (hasGameEnded())
         {
-            aiSteer.setWaypoint(transform);
+            //aiSteer.setWaypoint(transform);
+            aiSteer.clearWaypoints();
+            //agent.isStopped = true;
+            anim.speed = 1f;
         }
 
     }

@@ -1573,7 +1573,7 @@ public class AINavSteeringController : MonoBehaviour
 #if UNITY_EDITOR
 
     //debugging output + control
-    public bool debugOutput = false;
+    public bool debugOutput = true;
     public Vector3 debugForward;
     public float debugDesiredHeadingCorrection;
     public float debugNormAngle;
