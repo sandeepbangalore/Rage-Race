@@ -46,7 +46,7 @@ public class ThrowObjects : MonoBehaviour
         rbody_ball.isKinematic = false;
 
         //predictive code
-        float ballSpeed = 15.0f;
+        float ballSpeed = 75.0f;
         float playerSpeed = playerVelocity.magnitude;
         Vector3 playerDir = playerVelocity;
         playerDir.Normalize();

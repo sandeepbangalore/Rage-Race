@@ -26,7 +26,7 @@ public class AIController : MonoBehaviour
     public float waitTime;
     protected float beginWaitTime;
     private Vector3 lastLocation;
-
+	private GameManager MyGameManager = null;
     private Animator anim;
     private AINavSteeringController aiSteer;
     private NavMeshAgent agent;
@@ -36,13 +36,19 @@ public class AIController : MonoBehaviour
     // may change depending on how game start is implemented
     bool hasGameStarted()
     {
-        return Time.timeSinceLevelLoad > 3.0f;
+		if (MyGameManager.getGameState() != GameManager.States.Countdown) 
+			return true; 
+		else
+			return false;
+        //return Time.timeSinceLevelLoad > 3.0f;
     }
 
 
     // Use this for initialization
     void Start()
     {
+		MyGameManager = GameManager.Instance;
+
         // initialize nav mesh steering
         aiSteer = GetComponent<AINavSteeringController>();
         anim = GetComponent<Animator>();
