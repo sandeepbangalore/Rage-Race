@@ -5,6 +5,18 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour {
+	public EndGame finishPM;
+	public CameraDolly dollyCam;
+	public ThirdPersonCamera playerCam;
+	public Text playerPositionGUI;
+	public Transform[] NPCLocations;
+	public GameObject[] NPCs;
+	public GameObject leftWaypoints;
+	public GameObject rightWaypoints;
+	public GameObject playerG;
+	public Transform playerParent;
+	public Transform playerLocation;
+	public Transform parent;
 	public enum States {Countdown, Race, Finish};
 	public Text resultsTextUI = null;
 	public Canvas resultsCanvas = null;
@@ -23,6 +35,30 @@ public class GameManager : MonoBehaviour {
 			return _Instance;	
 		}
 	}
+
+	void Awake(){
+		Transform[] dummyLeftWayPoints = leftWaypoints.GetComponentsInChildren<Transform> ();
+		Transform[] newArrayLeft = new Transform[dummyLeftWayPoints.Length - 1];
+		System.Array.Copy(dummyLeftWayPoints, 1, newArrayLeft, 0, newArrayLeft.Length);
+		Transform[] dummyRightWayPoints = rightWaypoints.GetComponentsInChildren<Transform> ();
+		Transform[] newArrayRight = new Transform[dummyRightWayPoints.Length - 1];
+		System.Array.Copy(dummyRightWayPoints, 1, newArrayRight, 0, newArrayRight.Length);
+		foreach (Transform location in NPCLocations) {
+			GameObject dummy = Instantiate (NPCs [Random.Range (0, NPCs.Length)], location.position,location.rotation, parent) as GameObject;
+			PositionManager dummyPM = dummy.GetComponent<PositionManager> ();
+			dummyPM.leftWaypoints = newArrayLeft;
+			dummyPM.rightWaypoints = newArrayRight;
+		}
+		GameObject playerGO = Instantiate (playerG, playerLocation.position,playerLocation.rotation) as GameObject;
+		PositionManager playerPM = playerGO.GetComponent<PositionManager> ();
+		playerPM.leftWaypoints = newArrayLeft;
+		playerPM.rightWaypoints = newArrayRight;
+		playerPM.positionText = playerPositionGUI;
+		playerCam.standardPos = playerGO.transform.Find ("camPos");
+		dollyCam.camPos = playerGO.transform.Find ("camPos");
+		finishPM.player = playerPM;
+	}
+
 	// Use this for initialization
 	void Start () {
 		resultsCanvas.enabled = false;
@@ -58,13 +94,22 @@ public class GameManager : MonoBehaviour {
 				int place = System.Array.IndexOf (results, runner) + 1;
 				switch (place) {
 				case 1: 
-					resultsText += "1ST - " + runner.gameObject.name+"\n";
+					if (runner.gameObject.tag != "Player")
+						resultsText += "1ST - " + runner.gameObject.name+"\n";
+					else
+						resultsText += "<color=red>1ST - " + runner.gameObject.name+"</color>\n";
 					break;
 				case 2:
-					resultsText += "2ND - " + runner.gameObject.name+"\n";
+					if (runner.gameObject.tag != "Player")
+						resultsText += "2ND - " + runner.gameObject.name+"\n";
+					else
+						resultsText += "<color=red>2ND - " + runner.gameObject.name+"</color>\n";
 					break;
 				case 3:
-					resultsText += "3RD - " + runner.gameObject.name+"\n";
+					if (runner.gameObject.tag != "Player")
+						resultsText += "3RD - " + runner.gameObject.name+"\n";
+					else
+						resultsText += "<color=red>3RD - " + runner.gameObject.name+"</color>\n";
 					break;
 				case 4:
 				case 5:
@@ -73,7 +118,10 @@ public class GameManager : MonoBehaviour {
 				case 8:
 				case 9:
 				case 10:
-					resultsText += place+"TH - " + runner.gameObject.name+"\n";
+					if (runner.gameObject.tag != "Player")
+						resultsText += place+"TH - " + runner.gameObject.name+"\n";
+					else
+						resultsText += place+"<color=red>TH - " + runner.gameObject.name+"</color>\n";
 					break;
 				}
 //				Debug.Log (place);
