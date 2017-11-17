@@ -2780,6 +2780,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 1
+  slowdownblock: {fileID: 4903692734540580, guid: 11cd5d55bc030754c9e5e5d8b0552d93,
+    type: 2}
 --- !u!114 &114804605812328806
 MonoBehaviour:
   m_ObjectHideFlags: 1

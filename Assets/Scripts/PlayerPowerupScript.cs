@@ -27,6 +27,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 	private bool speedUp = false;
 	private bool slowDown = false;
+	public Transform slowdownblock;
 
 	// Use this for initialization
 	void Start () {
@@ -95,6 +96,20 @@ public class PlayerPowerupScript : MonoBehaviour {
 		if (collision.transform.gameObject.tag == "Slowdown") {
 			//EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
 			slowDown = true;
+		}
+
+		if (collision.transform.gameObject.tag == "SlowPickup") {
+			EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
+			Vector3 pos = gameObject.transform.position;
+			Vector3 dir = gameObject.transform.forward;
+			Quaternion rot = gameObject.transform.rotation;
+
+			Vector3 spawnPoint = pos + dir * -2;
+
+
+
+			Instantiate (slowdownblock, spawnPoint, rot);
+
 		}
 	}
 }
