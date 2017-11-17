@@ -8,6 +8,8 @@ TagManager:
   - grabbable
   - Powerup
   - NPC
+  - Slowdown
+  - SlowPickup
   layers:
   - Default
   - TransparentFX
