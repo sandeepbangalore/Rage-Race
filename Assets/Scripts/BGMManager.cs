@@ -21,7 +21,7 @@ public class BGMManager : MonoBehaviour {
     {
         if (BGM.clip.name == music.name)
             return;
-
+        BGM.volume = 0.1f;
         BGM.Stop();
         BGM.clip = music;
         BGM.Play();

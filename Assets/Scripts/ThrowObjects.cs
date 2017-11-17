@@ -39,19 +39,20 @@ public class ThrowObjects : MonoBehaviour
         }
 	}
 
-	void ExecuteThrowCallback(GameObject heldBall)
+	void ExecuteThrowCallback(GameObject heldBall, Collider col)
     {
         rbody_ball = heldBall.GetComponent<Rigidbody>();
         // heldBall.transform.parent = null;
         rbody_ball.isKinematic = false;
+        playerVelocity = col.attachedRigidbody.velocity;
 
         //predictive code
-        float ballSpeed = 75.0f;
+        float ballSpeed = 70.0f;
         float playerSpeed = playerVelocity.magnitude;
         Vector3 playerDir = playerVelocity;
         playerDir.Normalize();
 
-        Vector3 playerToBall = heldBall.transform.position - (player.transform.position + new Vector3(0,1.6f,0));
+        Vector3 playerToBall = heldBall.transform.position - (col.transform.position + new Vector3(0,1.6f,0));
         float playerToBallDist = playerToBall.magnitude;
         Vector3 playerToBallDir = playerToBall;
         playerToBallDir.Normalize();
@@ -83,8 +84,8 @@ public class ThrowObjects : MonoBehaviour
           beginTime = Time.timeSinceLevelLoad;
           // heldBall.transform.parent = leftHand;
           // rbody_ball.isKinematic = true;
-          ExecuteThrowCallback(heldBall);
-          ExecuteThrowCallback(heldBall1);
+          ExecuteThrowCallback(heldBall, c);
+          ExecuteThrowCallback(heldBall1, c);
         }
     }
 }

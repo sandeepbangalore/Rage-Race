@@ -154,13 +154,13 @@ public class AudioEventManager : MonoBehaviour
     void playerStepEventHandler(Vector3 worldPos)
     {
         
-        AudioSource.PlayClipAtPoint(this.playerStepAudio, worldPos, 2.5f);
+        AudioSource.PlayClipAtPoint(this.playerStepAudio, worldPos, 1f);
     }
 
     void powerUpEventHandler(Vector3 worldPos)
     {
 
-        AudioSource.PlayClipAtPoint(this.powerUpAudio, worldPos, 2.5f);
+        AudioSource.PlayClipAtPoint(this.powerUpAudio, worldPos, 1f);
     }
 
 
