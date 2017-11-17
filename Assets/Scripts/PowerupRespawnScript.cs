@@ -17,7 +17,7 @@ public class PowerupRespawnScript : MonoBehaviour
 		//int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 		for (int spawnPointIndex = 0; spawnPointIndex < spawnPoints.Length; spawnPointIndex++){
 			// Check if there are any other objects with pickup layer in the given sphere
-			Collider[] hitCollider = Physics.OverlapSphere (spawnPoints [spawnPointIndex].position, 2f, layerMask);
+			Collider[] hitCollider = Physics.OverlapSphere (spawnPoints [spawnPointIndex].position, 2f);
 			// Instantiate health pellets only if no other health pellet exists in the location
 			if (hitCollider.Length == 0) {
 				GameObject temp = Instantiate (pickup, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation) as GameObject;

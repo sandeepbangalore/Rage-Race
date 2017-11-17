@@ -17,14 +17,14 @@ public class ThirdPersonCamera : MonoBehaviour
 	public float smooth = 3f;		// a public variable to adjust smoothing of camera motion
 	public Transform standardPos;			// the usual position for the camera, specified by a transform in the game
 	//Transform lookAtPos;			// the position to move the camera to when using head look
-	
+
 	void Start()
 	{
 
         Debug.Log("camera init");
 
 		// initialising references
-		//standardPos = GameObject.Find ("CamPos").transform;
+		//standardPos = GameObject.FindGameObjectWithTag ("Player").transform.Find("camPos").transform;
 
         if (standardPos == null)
         {
