@@ -18,16 +18,21 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class PlayerPowerupScript : MonoBehaviour {
 
+    //[SerializeField] private Transform respawnPoint;
 
 	private ThirdPersonCharacter moveScript;
 	private AIController AIscript;
 	public float maxTime = 2.0f;
-	private float speedtimer;
-	private float slowtimer;
+    public float maxBoostTime = 0.5f;
 
-	private bool speedUp = false;
+    private float speedtimer;
+	private float slowtimer;
+    private float boosttimer;
+
+    private bool speedUp = false;
 	private bool slowDown = false;
-	public Transform slowdownblock;
+    private bool boost = false;
+    public Transform slowdownblock;
 
 	// Use this for initialization
 	void Start () {
@@ -64,7 +69,37 @@ public class PlayerPowerupScript : MonoBehaviour {
 			}
 		}
 
-		if (slowDown == true) {
+        if (boost == true)
+        {
+            if (gameObject.tag == "Player")
+            {
+                moveScript.speedPowerUp = 1.5f;
+            }
+            else if (gameObject.tag == "NPC")
+            {
+                AIscript.speedPowerUp = 1.5f;
+            }
+            boosttimer += Time.deltaTime;
+            if (boosttimer >= maxBoostTime)
+            {
+                if (boost == true)
+                {
+
+                    if (gameObject.tag == "Player")
+                    {
+                        moveScript.speedPowerUp = 1.0f;
+                    }
+                    else if (gameObject.tag == "NPC")
+                    {
+                        AIscript.speedPowerUp = 1.0f;
+                    }
+                    boosttimer = 0;
+                    boost = false;
+                }
+            }
+        }
+
+        if (slowDown == true) {
 			if (gameObject.tag == "Player") {
 				moveScript.speedPowerUp = 0.3f;
 			} else if (gameObject.tag == "NPC") {
@@ -111,5 +146,23 @@ public class PlayerPowerupScript : MonoBehaviour {
 			Instantiate (slowdownblock, spawnPoint, rot);
 
 		}
-	}
+
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.gameObject.tag == "Boost")
+        {
+            EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
+            boost = true;
+            Debug.Log("Hail Mary!");
+        }
+
+        if (other.transform.gameObject.tag == "DeathTrigger")
+        {
+            Debug.Log("FIRE FIRE FIRE!");
+            gameObject.transform.position = GameObject.Find("RespawnPoint").transform.position;
+        }
+    }
 }

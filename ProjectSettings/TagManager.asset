@@ -10,6 +10,9 @@ TagManager:
   - NPC
   - Slowdown
   - SlowPickup
+  - Ramp
+  - Fire
+  - DeathTrigger
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - 
   - 
   - Pickup
-  - 
+  - Ramp
   - 
   - 
   - 
