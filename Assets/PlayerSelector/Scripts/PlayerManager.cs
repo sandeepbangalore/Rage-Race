@@ -30,7 +30,9 @@ public class PlayerManager : MonoBehaviour {
 	private int oldNumber = 0;
 	private bool escPressed = false;
 	private bool stateChanged = false;
-	private static PlayerManager _Instance = null;
+    private GameManager MyGameManager = null;
+
+    private static PlayerManager _Instance = null;
 	public static PlayerManager Instance{
 		get{ 
 			if (_Instance == null) {
@@ -40,10 +42,15 @@ public class PlayerManager : MonoBehaviour {
 		}
 	}
 
+    public string getCurrent() {
+        return current.name;
+    }
 	//Awake is always called before any Start functions
 	void Awake()
 	{
-		characters [playerNumber].SetActive (true);
+        MyGameManager = GameManager.Instance;
+
+        characters[playerNumber].SetActive (true);
 		current = characters [playerNumber].GetComponent<CharacterDetails>();
 		if (characterName != null) 
 			characterName.text = current.name;
@@ -58,7 +65,7 @@ public class PlayerManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		
+        DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame
@@ -122,6 +129,7 @@ public class PlayerManager : MonoBehaviour {
 
 	public void Play()
 	{
+        //MyGameManager.selectedPlayer(current.name);
 		Application.LoadLevel("track");
 	}
 
