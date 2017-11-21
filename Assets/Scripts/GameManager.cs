@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour {
 			dummyPM.rightWaypoints = newArrayRight;
 		}
         playerSelectedName = selectedPlayer();
+		mainPlayer = playerG [0];
         foreach (GameObject playerSelected in playerG) {
             if (playerSelected.GetComponent<CharacterDetails>().name == playerSelectedName) {
                 mainPlayer = playerSelected;
@@ -145,6 +146,9 @@ public class GameManager : MonoBehaviour {
 
     public string selectedPlayer() {      //BV
         GameObject PM = GameObject.Find("PlayerManager");
-        return PM.GetComponent<PlayerManager>().getCurrent();
+		if (PM != null)
+			return PM.GetComponent<PlayerManager> ().getCurrent ();
+		else
+			return "";
     }
 }
