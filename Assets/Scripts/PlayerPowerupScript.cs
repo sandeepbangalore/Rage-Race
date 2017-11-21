@@ -48,6 +48,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 	void Update () {
 
 		if (speedUp == true) {
+			GetComponent<TrailRenderer> ().enabled = true;
 			if (gameObject.tag == "Player") {
 				moveScript.speedPowerUp = 3.0f;
 			} else if (gameObject.tag == "NPC") {
@@ -65,6 +66,8 @@ public class PlayerPowerupScript : MonoBehaviour {
 					}
 					speedtimer = 0;
 					speedUp = false;
+					GetComponent<TrailRenderer> ().enabled = false;
+
 				}
 			}
 		}
