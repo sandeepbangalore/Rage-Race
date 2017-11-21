@@ -124,19 +124,26 @@ public class PlayerPowerupScript : MonoBehaviour {
 			}
 		}
 	}
+		
 
-	void OnCollisionEnter(Collision collision) {
-		if (collision.transform.gameObject.tag == "Powerup") {
-            EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
-            speedUp = true;
+    private void OnTriggerEnter(Collider other)
+    {
+
+		if (other.gameObject.tag == "Powerup") {
+			EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
+			Debug.Log("Speedup");
+			speedUp = true;
+			Destroy (other.transform.parent.gameObject);
+
 		}
 
-		if (collision.transform.gameObject.tag == "Slowdown") {
+		if (other.gameObject.tag == "Slowdown") {
 			//EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
 			slowDown = true;
+			Destroy (other.gameObject);
 		}
 
-		if (collision.transform.gameObject.tag == "SlowPickup") {
+		if (other.gameObject.tag == "SlowPickup") {
 			EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
 			Vector3 pos = gameObject.transform.position;
 			Vector3 dir = gameObject.transform.forward;
@@ -144,17 +151,12 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 			Vector3 spawnPoint = pos + dir * -2;
 
-
-
 			Instantiate (slowdownblock, spawnPoint, rot);
+			Destroy (other.transform.parent.gameObject);
+
 
 		}
 
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
         if (other.transform.gameObject.tag == "Boost")
         {
             EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);

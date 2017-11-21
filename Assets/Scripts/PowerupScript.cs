@@ -26,7 +26,7 @@ public class PowerupScript : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter(Collision collision) {
+	void OnTriggerEnter(Collision collision) {
 		if (collision.transform.gameObject.tag == "Player" || collision.transform.gameObject.tag == "NPC") {
 
 			if (transform.parent != null) {
