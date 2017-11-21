@@ -31,6 +31,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 
     private bool speedUp = false;
 	private bool slowDown = false;
+	private bool hasSlowDown = false;
     private bool boost = false;
     public Transform slowdownblock;
 
@@ -46,6 +47,20 @@ public class PlayerPowerupScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetButtonDown ("Fire1")) {
+			Debug.Log ("Fire1!!");
+			if (hasSlowDown) {
+				Vector3 pos = gameObject.transform.position;
+				Vector3 dir = gameObject.transform.forward;
+				Quaternion rot = gameObject.transform.rotation;
+				Vector3 spawnPoint = pos + dir * -2;
+				Instantiate (slowdownblock, spawnPoint, rot);
+				hasSlowDown = false;
+				////Sound effect of dropping block
+			}
+		}
+			
 
 		if (speedUp == true) {
 			GetComponent<TrailRenderer> ().enabled = true;
@@ -145,15 +160,8 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 		if (other.gameObject.tag == "SlowPickup") {
 			EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
-			Vector3 pos = gameObject.transform.position;
-			Vector3 dir = gameObject.transform.forward;
-			Quaternion rot = gameObject.transform.rotation;
-
-			Vector3 spawnPoint = pos + dir * -2;
-
-			Instantiate (slowdownblock, spawnPoint, rot);
+			hasSlowDown = true;
 			Destroy (other.transform.parent.gameObject);
-
 
 		}
 
