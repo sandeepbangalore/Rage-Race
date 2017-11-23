@@ -17,11 +17,13 @@ public class AIController : MonoBehaviour
     }
 
 	public float speedPowerUp = 1f;
+    private bool shouldUseSlow = false;
 
     public float moveSpeedMultiplier = 1f;
 
     private PositionManager positionManager;
     private Vector3 nextWaypoint;
+    private bool isPathingToPowerup = false;
 
     public State state = State.SetNewGoal; // currently unused
 
@@ -44,7 +46,10 @@ public class AIController : MonoBehaviour
             return true;
         }
 		else
-			return false;
+        {
+            anim.speed = 1f + Random.Range(-0.3f, 0.3f);
+            return false;
+        }
         //return Time.timeSinceLevelLoad > 3.0f;
     }
 
@@ -79,7 +84,6 @@ public class AIController : MonoBehaviour
         // initialize nav mesh steering
         aiSteer = GetComponent<AINavSteeringController>();
         anim = GetComponent<Animator>();
-        anim.speed += Random.Range(-0.3f, 0.3f);
         aiSteer.Init();
         aiSteer.waypointLoop = false;
         aiSteer.stopAtNextWaypoint = false;
@@ -141,7 +145,7 @@ public class AIController : MonoBehaviour
             debugPrint("I've passed waypoint " + positionManager.getWaypointProgress());
             debugPrint("next waypoint = " + nextWaypoint);
             
-            if (positionManager.isBehindPlayer(false, 1)) // check if agent is behind player using waypoints, not race position
+            if (positionManager.isBehindPlayer(false, 2)) // check if agent is behind player using waypoints, not race position
             {
                 debugPrint("I'm warping!!");
                 agent.Warp(nextWaypoint);
@@ -151,12 +155,23 @@ public class AIController : MonoBehaviour
         lastLocation = transform.position;
     }
 
+    public bool getShouldUseSlow()
+    {
+        return shouldUseSlow;
+    }
+
+    void updateShouldUseSlow()
+    {
+        shouldUseSlow = positionManager.isBehindPlayer(true, -1); // check if agent is in front of player using race position, not waypoints
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (hasGameStarted())
         {
             updateNextWaypoint();
+            updateShouldUseSlow();
 
             if (Time.timeSinceLevelLoad - beginWaitTime > waitTime)
             {
@@ -166,8 +181,9 @@ public class AIController : MonoBehaviour
         }
         else if (hasGameEnded())
         {
-            //aiSteer.setWaypoint(transform);
             aiSteer.clearWaypoints();
+            nextWaypoint = transform.position;
+            aiSteer.setWaypoint(transform);
             //agent.isStopped = true;
             anim.speed = 1f;
         }

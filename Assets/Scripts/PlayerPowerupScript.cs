@@ -48,8 +48,8 @@ public class PlayerPowerupScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetButtonDown ("Fire1")) {
-			Debug.Log ("Fire1!!");
+		if (Input.GetButtonDown ("Fire1") || (AIscript != null && AIscript.getShouldUseSlow())) {
+			//Debug.Log ("Fire1!!");
 			if (hasSlowDown) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;

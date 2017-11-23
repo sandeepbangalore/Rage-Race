@@ -26,6 +26,8 @@ public class ThrowObjects : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+        player = GameObject.FindGameObjectWithTag("Player");
+        rbody_player = player.GetComponent<Rigidbody>();
 		playerVelocity = rbody_player.velocity;
 	}
 	
