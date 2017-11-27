@@ -145,9 +145,9 @@ public class GameManager : MonoBehaviour {
 	}
 
     public string selectedPlayer() {      //BV
-        GameObject PM = GameObject.Find("PlayerManager");
+        GameObject PM = GameObject.Find("SceneManagerLocal");
 		if (PM != null)
-			return PM.GetComponent<PlayerManager> ().getCurrent ();
+			return PM.GetComponent<SceneManagerLocal> ().getCurrent ();
 		else
 			return "";
     }

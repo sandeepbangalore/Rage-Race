@@ -15,7 +15,10 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class PlayerManager : MonoBehaviour {
-
+//	public GameObject pauseMenuCanvas = null;
+//	public GameObject characterCanvas = null;
+//	public GameObject characterParent = null;
+	//public GameObject[] charactersPrefab;
 	public GameObject[] characters;
 	public Text characterName = null;
 	public Slider characterSpeed = null;
@@ -31,6 +34,7 @@ public class PlayerManager : MonoBehaviour {
 	private bool escPressed = false;
 	private bool stateChanged = false;
     private GameManager MyGameManager = null;
+	private SceneManagerLocal MySceneManager = null;
 
     private static PlayerManager _Instance = null;
 	public static PlayerManager Instance{
@@ -49,7 +53,17 @@ public class PlayerManager : MonoBehaviour {
 	void Awake()
 	{
         MyGameManager = GameManager.Instance;
+		MySceneManager = SceneManagerLocal.Instance;
+		//GameObject pMenu = Instantiate (pauseMenuCanvas) as GameObject;
+		//GameObject cCanvas = Instantiate (characterCanvas) as GameObject;
+		//pauseMenu = pMenu.GetComponent<Canvas> ();
 
+		//characters = new GameObject[charactersPrefab.Length];
+		//GameObject cParent = Instantiate (characterParent) as GameObject;
+//		for (int i = 0; i < charactersPrefab.Length; i++) {
+//			characters[i] = Instantiate (charactersPrefab[i], cParent.transform) as GameObject;
+//			characters [i].SetActive (false);
+//		}
         characters[playerNumber].SetActive (true);
 		current = characters [playerNumber].GetComponent<CharacterDetails>();
 		if (characterName != null) 
@@ -65,7 +79,9 @@ public class PlayerManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-        DontDestroyOnLoad(gameObject);
+//        DontDestroyOnLoad(gameObject);
+//		if (FindObjectsOfType<PlayerManager>().Length > 1)
+//			Destroy(gameObject);
 	}
 	
 	// Update is called once per frame
@@ -129,7 +145,7 @@ public class PlayerManager : MonoBehaviour {
 
 	public void Play()
 	{
-        //MyGameManager.selectedPlayer(current.name);
+        MySceneManager.setCurrent(current.name);
 		Application.LoadLevel("track");
 	}
 
