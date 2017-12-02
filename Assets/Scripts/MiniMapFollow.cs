@@ -5,11 +5,11 @@ using UnityEngine;
 public class MiniMapFollow : MonoBehaviour {
 
 	public Transform player;
-//	public Camera main;
-//	public Shader overdraw;
-//	void Start() {
-//		main.SetReplacementShader  (overdraw, "Map");
-//	}
+	public Camera main;
+	public Shader overdraw;
+	void Start() {
+		main.SetReplacementShader  (overdraw, "Map");
+	}
 	void LateUpdate ()
 	{
 		if (player != null) {
