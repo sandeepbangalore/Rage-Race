@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour {
+	public MiniMapFollow mmf;
 	public EndGame finishPM;
 	public CameraDolly dollyCam;
 	public ThirdPersonCamera playerCam;
@@ -23,7 +24,8 @@ public class GameManager : MonoBehaviour {
 	public Canvas finishCanvas = null;
 	public GameObject pausedDummy = null;
 	private States gameState = States.Countdown; 
-	private PositionManager[] results; 
+	private PositionManager[] results;
+	public PositionManager[] gameCurrentPositions;
 	private string resultsText = "";
 	private bool printed = false;
     private GameObject mainPlayer = null; //BV
@@ -67,6 +69,7 @@ public class GameManager : MonoBehaviour {
 		playerCam.standardPos = playerGO.transform.Find ("camPos");
 		dollyCam.camPos = playerGO.transform.Find ("camPos");
 		finishPM.player = playerPM;
+		mmf.player = playerGO.transform;
 	}
 
 	// Use this for initialization
@@ -93,6 +96,10 @@ public class GameManager : MonoBehaviour {
 	public void finalResults(PositionManager[] runners){
         results = new PositionManager[runners.Length];       //BV
 		System.Array.Copy(runners,results,runners.Length);  //BV
+	}
+
+	public void currentPositions(PositionManager[] runners){
+		gameCurrentPositions = runners;
 	}
 
 	void printResults(){

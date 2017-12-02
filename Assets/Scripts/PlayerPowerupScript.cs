@@ -31,13 +31,21 @@ public class PlayerPowerupScript : MonoBehaviour {
 
     private bool speedUp = false;
 	private bool slowDown = false;
-	private bool hasSlowDown = false;
+	public bool hasSlowDown = false;
+	public bool hasDriller = false;
+	public bool hasHoming = false;
     private bool boost = false;
+	public string[] powerupSlots;
+	public bool slotsAvailable = true;
     public Transform slowdownblock;
+	public GameObject Driller;
+	public GameObject Homing;
 
 	// Use this for initialization
 	void Start () {
-
+		powerupSlots = new string[2];
+		powerupSlots [0] = "";
+		powerupSlots [1] = "";
 		if (gameObject.tag == "Player") {
 			moveScript = GetComponent<ThirdPersonCharacter> ();
 		} else if (gameObject.tag == "NPC") {
@@ -50,13 +58,79 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Fire1") || (AIscript != null && AIscript.getShouldUseSlow())) {
 			//Debug.Log ("Fire1!!");
-			if (hasSlowDown) {
+			if (hasSlowDown && powerupSlots[0] == "SlowPickup") {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation;
 				Vector3 spawnPoint = pos + dir * -2;
 				Instantiate (slowdownblock, spawnPoint, rot);
-				hasSlowDown = false;
+				if (powerupSlots[1] != "SlowPickup")
+					hasSlowDown = false;
+				powerupSlots [0] = "";
+				slotsAvailable = true;
+				////Sound effect of dropping block
+			}
+			if (hasDriller && powerupSlots[0] == "DrillerPickup") {
+				Vector3 pos = gameObject.transform.position;
+				Vector3 dir = gameObject.transform.forward;
+				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
+				Vector3 spawnPoint = pos + dir * 1.75f + gameObject.transform.up * 1.75f;
+				Instantiate (Driller, spawnPoint, rot);
+				if (powerupSlots[1] != "DrillerPickup")
+					hasDriller = false;
+				powerupSlots [0] = "";
+				slotsAvailable = true;
+				////Sound effect of dropping block
+			}
+			if (hasHoming && powerupSlots[0] == "HomingPickup") {
+				Vector3 pos = gameObject.transform.position;
+				Vector3 dir = gameObject.transform.forward;
+				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
+				Vector3 spawnPoint = pos + dir * 2f + gameObject.transform.up * 5f;
+				Instantiate (Homing, spawnPoint, rot);
+				if (powerupSlots[1] != "HomingPickup")
+					hasHoming = false;
+				powerupSlots [0] = "";
+				slotsAvailable = true;
+				////Sound effect of dropping block
+			}
+		}
+
+		if (Input.GetButtonDown ("Fire2")) {
+			if (hasSlowDown && powerupSlots[1] == "SlowPickup") {
+				Vector3 pos = gameObject.transform.position;
+				Vector3 dir = gameObject.transform.forward;
+				Quaternion rot = gameObject.transform.rotation;
+				Vector3 spawnPoint = pos + dir * -2;
+				Instantiate (slowdownblock, spawnPoint, rot);
+				if (powerupSlots[0] != "SlowPickup")
+					hasSlowDown = false;
+				powerupSlots [1] = "";
+				slotsAvailable = true;
+				////Sound effect of dropping block
+			}
+			if (hasDriller && powerupSlots[1] == "DrillerPickup") {
+				Vector3 pos = gameObject.transform.position;
+				Vector3 dir = gameObject.transform.forward;
+				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
+				Vector3 spawnPoint = pos + dir * 1.75f + gameObject.transform.up * 1.75f;
+				Instantiate (Driller, spawnPoint, rot);
+				if (powerupSlots[0] != "DrillerPickup")
+					hasDriller = false;
+				powerupSlots [1] = "";
+				slotsAvailable = true;
+				////Sound effect of dropping block
+			}
+			if (hasHoming && powerupSlots[1] == "HomingPickup") {
+				Vector3 pos = gameObject.transform.position;
+				Vector3 dir = gameObject.transform.forward;
+				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
+				Vector3 spawnPoint = pos + dir * 2f + gameObject.transform.up * 5f;
+				Instantiate (Homing, spawnPoint, rot);
+				if (powerupSlots[0] != "HomingPickup")
+					hasHoming = false;
+				powerupSlots [1] = "";
+				slotsAvailable = true;
 				////Sound effect of dropping block
 			}
 		}
@@ -149,7 +223,6 @@ public class PlayerPowerupScript : MonoBehaviour {
 			Debug.Log("Speedup");
 			speedUp = true;
 			Destroy (other.transform.parent.gameObject);
-
 		}
 
 		if (other.gameObject.tag == "Slowdown") {
@@ -159,10 +232,54 @@ public class PlayerPowerupScript : MonoBehaviour {
 		}
 
 		if (other.gameObject.tag == "SlowPickup") {
-			EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
-			hasSlowDown = true;
-			Destroy (other.transform.parent.gameObject);
+			if (areSlotsAvailable ()) {
+				EventManager.TriggerEvent<PowerUpEvent, Vector3> (transform.position);
+				hasSlowDown = true;
+				if (powerupSlots [0] == null || powerupSlots [0] == "") {
+					powerupSlots [0] = "SlowPickup";
+					Destroy (other.transform.parent.gameObject);
+				} else if (powerupSlots [1] == null || powerupSlots [1] == "") {
+					powerupSlots [1] = "SlowPickup";
+					Destroy (other.transform.parent.gameObject);
+				}
+				else
+					slotsAvailable = false;
+			} else
+				Debug.Log ("Slots not available");
+		}
 
+		if (other.gameObject.tag == "DrillerPickup") {
+			if (areSlotsAvailable ()) {
+				EventManager.TriggerEvent<PowerUpEvent, Vector3> (transform.position);
+				hasDriller = true;
+				if (powerupSlots [0] == null || powerupSlots [0] == "") {
+					powerupSlots [0] = "DrillerPickup";
+					Destroy (other.transform.parent.gameObject);
+				} else if (powerupSlots [1] == null || powerupSlots [1] == "") {
+					powerupSlots [1] = "DrillerPickup";
+					Destroy (other.transform.parent.gameObject);
+				}
+				else
+					slotsAvailable = false;
+			} else
+				Debug.Log ("Slots not available");
+		}
+
+		if (other.gameObject.tag == "HomingPickup") {
+			if (areSlotsAvailable ()) {
+				EventManager.TriggerEvent<PowerUpEvent, Vector3> (transform.position);
+				hasHoming = true;
+				if (powerupSlots [0] == null || powerupSlots [0] == "") {
+					powerupSlots [0] = "HomingPickup";
+					Destroy (other.transform.parent.gameObject);
+				} else if (powerupSlots [1] == null || powerupSlots [1] == "") {
+					powerupSlots [1] = "HomingPickup";
+					Destroy (other.transform.parent.gameObject);
+				}
+				else
+					slotsAvailable = false;
+			} else
+				Debug.Log ("Slots not available");
 		}
 
         if (other.transform.gameObject.tag == "Boost")
@@ -178,4 +295,8 @@ public class PlayerPowerupScript : MonoBehaviour {
             gameObject.transform.position = GameObject.Find("RespawnPoint").transform.position;
         }
     }
+
+	public bool areSlotsAvailable(){
+		return slotsAvailable;
+	}
 }

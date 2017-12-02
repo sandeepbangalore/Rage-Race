@@ -32,6 +32,7 @@ public class PositionManager : MonoBehaviour {
 
         // get all runners/competitors
         runners = FindObjectsOfType<PositionManager>();
+		positions ();
 	}
 
     // creates waypoints for the whole track
@@ -227,5 +228,10 @@ public class PositionManager : MonoBehaviour {
 	{
 		System.Array.Sort (runners, sortByPosition);
 		MyGameManager.finalResults (runners);
+	}
+
+	public void positions(){
+		System.Array.Sort (runners, sortByPosition);
+		MyGameManager.currentPositions (runners);
 	}
 }

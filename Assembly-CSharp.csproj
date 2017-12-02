@@ -52,6 +52,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EasyRoads3D\Scripts\runtimeScript.cs" />
+     <Compile Include="Assets\Missile\DrillerMissile.cs" />
+     <Compile Include="Assets\Missile\DrillFwd.cs" />
+     <Compile Include="Assets\Missile\DrillLauncher.cs" />
+     <Compile Include="Assets\Missile\homingC.cs" />
+     <Compile Include="Assets\Missile\HomingMissile.cs" />
+     <Compile Include="Assets\Missile\Launcher.cs" />
+     <Compile Include="Assets\Missile\RotateDriller.cs" />
      <Compile Include="Assets\PlayerSelector\Scripts\CharacterDetails.cs" />
      <Compile Include="Assets\PlayerSelector\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\PlayerSelector\Scripts\SceneManagerLocal.cs" />
@@ -86,6 +93,7 @@
      <Compile Include="Assets\Scripts\Explosions.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
+     <Compile Include="Assets\Scripts\MiniMapFollow.cs" />
      <Compile Include="Assets\Scripts\MouseHover.cs" />
      <Compile Include="Assets\Scripts\PauseManager.cs" />
      <Compile Include="Assets\Scripts\PlayerPowerupScript.cs" />

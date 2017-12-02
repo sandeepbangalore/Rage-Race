@@ -26,13 +26,14 @@ public class PowerupScript : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter(Collision collision) {
+	void OnTriggerEnter(Collider collision) {
 		if (collision.transform.gameObject.tag == "Player" || collision.transform.gameObject.tag == "NPC") {
-
-			if (transform.parent != null) {
-				Destroy (transform.parent.gameObject);
+			if (collision.gameObject.GetComponent<PlayerPowerupScript>().areSlotsAvailable()) {
+				if (transform.parent != null) {
+					Destroy (transform.parent.gameObject);
+				}
+				Destroy (gameObject);
 			}
-			Destroy(gameObject);
 		}
 		
 	}

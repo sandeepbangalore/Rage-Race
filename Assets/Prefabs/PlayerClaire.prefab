@@ -56,6 +56,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1063596042475714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4606643091908958}
+  - component: {fileID: 20042980966552646}
+  m_Layer: 9
+  m_Name: RearViewMirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1071479623518348
 GameObject:
   m_ObjectHideFlags: 1
@@ -1352,7 +1368,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1288896337379460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.12, z: -3.03}
+  m_LocalPosition: {x: 0, y: 2.45, z: -3.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4514714059052704}
@@ -1745,6 +1761,7 @@ Transform:
   - {fileID: 4683748124152756}
   - {fileID: 4208861370974306}
   - {fileID: 4107653094391794}
+  - {fileID: 4606643091908958}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -1854,6 +1871,19 @@ Transform:
   m_Father: {fileID: 4253071576259986}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4606643091908958
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063596042475714}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 2.45, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 4514714059052704}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4610782047105370
 Transform:
   m_ObjectHideFlags: 1
@@ -2464,6 +2494,42 @@ Transform:
   m_Father: {fileID: 4714121915272636}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &20042980966552646
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063596042475714}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0, g: 0.060049023, b: 0.1544118, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 8400000, guid: fb85ae99ae0017d4db24ea29474a7878, type: 2}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!54 &54955653065187148
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2493,113 +2559,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: '
-
-    Transform ''LeftToeBase'' has been deleted
-
-    Transform ''LeftFoot'' has been deleted
-
-    Transform ''LeftLeg'' has been deleted
-
-    Transform ''LeftUpLeg'' has been deleted
-
-    Transform ''RightToeBase'' has been deleted
-
-    Transform ''RightFoot'' has been deleted
-
-    Transform ''RightLeg'' has been deleted
-
-    Transform ''RightUpLeg'' has been deleted
-
-    Transform ''Pelvis'' has been deleted
-
-    Transform ''LeftHandIndex3'' has been deleted
-
-    Transform ''LeftHandIndex2'' has been deleted
-
-    Transform ''LeftHandIndex1'' has been deleted
-
-    Transform ''LeftHandMiddle3'' has been deleted
-
-    Transform ''LeftHandMiddle2'' has been deleted
-
-    Transform ''LeftHandMiddle1'' has been deleted
-
-    Transform ''LeftHandPinky3'' has been deleted
-
-    Transform ''LeftHandPinky2'' has been deleted
-
-    Transform ''LeftHandPinky1'' has been deleted
-
-    Transform ''LeftHandRing3'' has been deleted
-
-    Transform ''LeftHandRing2'' has been deleted
-
-    Transform ''LeftHandRing1'' has been deleted
-
-    Transform ''LeftHandThumb3'' has been deleted
-
-    Transform ''LeftHandThumb2'' has been deleted
-
-    Transform ''LeftHandThumb1'' has been deleted
-
-    Transform ''LeftHand'' has been deleted
-
-    Transform ''LeftForeArm'' has been deleted
-
-    Transform ''LeftArm'' has been deleted
-
-    Transform ''LeftShoulder'' has been deleted
-
-    Transform ''Head'' has been deleted
-
-    Transform ''Neck'' has been deleted
-
-    Transform ''RightHandIndex3'' has been deleted
-
-    Transform ''RightHandIndex2'' has been deleted
-
-    Transform ''RightHandIndex1'' has been deleted
-
-    Transform ''RightHandMiddle3'' has been deleted
-
-    Transform ''RightHandMiddle2'' has been deleted
-
-    Transform ''RightHandMiddle1'' has been deleted
-
-    Transform ''RightHandPinky3'' has been deleted
-
-    Transform ''RightHandPinky2'' has been deleted
-
-    Transform ''RightHandPinky1'' has been deleted
-
-    Transform ''RightHandRing3'' has been deleted
-
-    Transform ''RightHandRing2'' has been deleted
-
-    Transform ''RightHandRing1'' has been deleted
-
-    Transform ''RightHandThumb3'' has been deleted
-
-    Transform ''RightHandThumb2'' has been deleted
-
-    Transform ''RightHandThumb1'' has been deleted
-
-    Transform ''RightHand'' has been deleted
-
-    Transform ''RightForeArm'' has been deleted
-
-    Transform ''RightArm'' has been deleted
-
-    Transform ''RightShoulder'' has been deleted
-
-    Transform ''Spine2'' has been deleted
-
-    Transform ''Spine1'' has been deleted
-
-    Transform ''Spine'' has been deleted
-
-    Transform ''Hips'' has been deleted'
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!96 &96683671772343348
@@ -2805,8 +2765,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTime: 1
   maxBoostTime: 0.5
+  hasSlowDown: 0
+  hasDriller: 0
+  hasHoming: 0
+  powerupSlots: []
+  slotsAvailable: 1
   slowdownblock: {fileID: 4903692734540580, guid: 11cd5d55bc030754c9e5e5d8b0552d93,
     type: 2}
+  Driller: {fileID: 1755938521150968, guid: eb58b7cb24c70fc42a1e677b6200f7db, type: 2}
+  Homing: {fileID: 1727290189784546, guid: eebf4c3011c43c9479deff328e6f49ce, type: 2}
 --- !u!114 &114620459191143690
 MonoBehaviour:
   m_ObjectHideFlags: 1

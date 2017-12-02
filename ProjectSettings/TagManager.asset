@@ -13,6 +13,9 @@ TagManager:
   - Ramp
   - Fire
   - DeathTrigger
+  - DrillerPickup
+  - Map
+  - HomingPickup
   layers:
   - Default
   - TransparentFX

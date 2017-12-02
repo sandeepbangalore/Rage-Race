@@ -86,6 +86,11 @@ public class PlayerManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!EventSystem.current.alreadySelecting && EventSystem.current.currentSelectedGameObject != null && 
+			(EventSystem.current.currentSelectedGameObject.name == "Next" || EventSystem.current.currentSelectedGameObject.name == "Previous" ))
+			EventSystem.current.SetSelectedGameObject (selectorDummy);
+		if (EventSystem.current.currentSelectedGameObject == null)
+			EventSystem.current.SetSelectedGameObject (selectorDummy);
 		if (Input.GetKeyDown (KeyCode.Escape) && !escPressed) {
 			escPressed = true;
 			Time.timeScale = 0;
@@ -114,11 +119,13 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	public void playerNumberIncrease() {
-		oldNumber = playerNumber;
-		sliderAnimation.SetTrigger ("slide");
-		playerNumber = (playerNumber + 1) % characters.Length;
-		StartCoroutine (WaitInfoChange ());
-		Debug.Log (playerNumber);
+		if (EventSystem.current.currentSelectedGameObject.name == "Next"){
+			oldNumber = playerNumber;
+			sliderAnimation.SetTrigger ("slide");
+			playerNumber = (playerNumber + 1) % characters.Length;
+			StartCoroutine (WaitInfoChange ());
+			//Debug.Log (playerNumber);
+		}
 	}
 
 	public IEnumerator WaitInfoChange() {
@@ -127,14 +134,27 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	public void playerNumberDecrease() {
-		oldNumber = playerNumber;
-		sliderAnimation.SetTrigger ("slide");
-		if (playerNumber == 0)
-			playerNumber = characters.Length - 1;
-		else
-			playerNumber = (playerNumber - 1);
-		StartCoroutine (WaitInfoChange ());
-		Debug.Log (playerNumber);
+		if (EventSystem.current.currentSelectedGameObject.name == "Previous") {			
+			oldNumber = playerNumber;
+			sliderAnimation.SetTrigger ("slide");
+			if (playerNumber == 0)
+				playerNumber = characters.Length - 1;
+			else
+				playerNumber = (playerNumber - 1);
+			StartCoroutine (WaitInfoChange ());
+			Debug.Log (playerNumber);
+		}
+	}
+
+	public void clickReset(){
+		WaitClick ();
+		Debug.Log ("Done1");
+		EventSystem.current.SetSelectedGameObject (selectorDummy);
+		Debug.Log ("Done");
+	}
+
+	public IEnumerator WaitClick() {
+		yield return new WaitForSeconds(0.5f); // waits 3 seconds
 	}
 
 	public void MenuScreen()
