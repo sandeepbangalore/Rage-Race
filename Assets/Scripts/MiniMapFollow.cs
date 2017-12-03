@@ -8,7 +8,7 @@ public class MiniMapFollow : MonoBehaviour {
 	public Camera main;
 	public Shader overdraw;
 	void Start() {
-		main.SetReplacementShader  (overdraw, "Map");
+		//main.SetReplacementShader  (overdraw, "Map");
 	}
 	void LateUpdate ()
 	{
