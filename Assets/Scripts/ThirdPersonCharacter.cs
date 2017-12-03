@@ -238,5 +238,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Animator.applyRootMotion = false;
 			}
 		}
+
+		public void Stunned(){
+			m_Animator.SetTrigger ("Stun");
+		}
 	}
 }

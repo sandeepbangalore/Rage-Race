@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.ThirdPerson;
+
+
 
 public class DrillerMissile : MonoBehaviour {
 	public GameObject missileMod;
@@ -32,6 +35,12 @@ public class DrillerMissile : MonoBehaviour {
 			//yield return new WaitForSeconds(1);
 			Destroy(gameObject);
 			//Destroy (collision.gameObject, 1);
+			if (collision.gameObject.tag == "Player") {
+				collision.gameObject.GetComponent<ThirdPersonCharacter> ().Stunned ();
+			}
+			if (collision.gameObject.tag == "NPC") {
+				collision.gameObject.GetComponent<AIController> ().Stunned ();
+			}
 		}
 		else{
 			SmokePrefab.emissionRate = 0.0f;
@@ -40,7 +49,12 @@ public class DrillerMissile : MonoBehaviour {
 				rb.AddExplosionForce(1000f, gameObject.transform.position, 3, 3.0f);
 			Destroy(missileMod.gameObject,0.25f);
 			Destroy(gameObject,0.25f);
-
+			if (collision.gameObject.tag == "Player") {
+				collision.gameObject.GetComponent<ThirdPersonCharacter> ().Stunned ();
+			}
+			if (collision.gameObject.tag == "NPC") {
+				collision.gameObject.GetComponent<AIController> ().Stunned ();
+			}
 		}
 		//	return;
 	}

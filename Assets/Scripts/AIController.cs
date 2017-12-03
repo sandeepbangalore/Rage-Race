@@ -189,4 +189,8 @@ public class AIController : MonoBehaviour
         }
 
     }
+
+	public void Stunned(){
+		anim.SetTrigger ("Stun");
+	}
 }

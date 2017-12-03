@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\AnimCallbaack.cs" />
      <Compile Include="Assets\Scripts\Audience.cs" />
      <Compile Include="Assets\Scripts\AudioEventManager.cs" />
+     <Compile Include="Assets\Scripts\BallCollision.cs" />
      <Compile Include="Assets\Scripts\BGMManager.cs" />
      <Compile Include="Assets\Scripts\BGMManagerCheck.cs" />
      <Compile Include="Assets\Scripts\CameraDolly.cs" />

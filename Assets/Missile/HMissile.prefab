@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4534814677199284}
   - component: {fileID: 54125383357835570}
   - component: {fileID: 114118184900315546}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: HMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4024562719274896}
   - component: {fileID: 33459826788746968}
   - component: {fileID: 23752783563111274}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Missile_side_Ext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 23316221607553646}
   - component: {fileID: 136127662435672792}
   - component: {fileID: 96922350247792236}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

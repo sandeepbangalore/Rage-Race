@@ -34,7 +34,7 @@ public class ThrowObjects : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if(beginTime != 0.0f && Time.timeSinceLevelLoad - beginTime >= 6)
+		if(beginTime != 0.0f && Time.timeSinceLevelLoad - beginTime >= 2)
 		{
             Destroy(heldBall);
             Destroy(heldBall1);
