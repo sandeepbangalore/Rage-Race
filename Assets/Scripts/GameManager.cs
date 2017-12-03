@@ -5,6 +5,15 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour {
+	
+	public enum TrackMode {Day, Night};
+	public TrackMode mode = TrackMode.Day; 
+	public GameObject DayMode = null;
+	public GameObject NightMode = null;
+	public GameObject RightLamps = null;
+	public GameObject LeftLamps = null;
+	public Material DaySkybox = null;
+	public Material NightSkybox = null;
 	public MiniMapFollow mmf;
 	public EndGame finishPM;
 	public CameraDolly dollyCam;
@@ -41,6 +50,27 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Awake(){
+		if (selectedTrack() == "Day Mode")
+			mode = TrackMode.Day;
+		if (selectedTrack() == "Night Mode")
+			mode = TrackMode.Night;
+		
+		if (mode == TrackMode.Day) {
+			DayMode.SetActive (true);
+			NightMode.SetActive (false);
+			RightLamps.SetActive (false);
+			LeftLamps.SetActive (false);
+			RenderSettings.skybox = DaySkybox;
+		}
+
+		if (mode == TrackMode.Night) {
+			DayMode.SetActive (false);
+			NightMode.SetActive (true);
+			RightLamps.SetActive (true);
+			LeftLamps.SetActive (true);
+			RenderSettings.skybox = NightSkybox;
+		}
+
 		Transform[] dummyLeftWayPoints = leftWaypoints.GetComponentsInChildren<Transform> ();
 		Transform[] newArrayLeft = new Transform[dummyLeftWayPoints.Length - 1];
 		System.Array.Copy(dummyLeftWayPoints, 1, newArrayLeft, 0, newArrayLeft.Length);
@@ -158,4 +188,12 @@ public class GameManager : MonoBehaviour {
 		else
 			return "";
     }
+
+	public string selectedTrack() {      //BV
+		GameObject PM = GameObject.Find("SceneManagerLocal");
+		if (PM != null)
+			return PM.GetComponent<SceneManagerLocal> ().getTrack ();
+		else
+			return "";
+	}
 }

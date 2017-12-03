@@ -166,7 +166,7 @@ public class PlayerManager : MonoBehaviour {
 	public void Play()
 	{
         MySceneManager.setCurrent(current.name);
-		Application.LoadLevel("track");
+		Application.LoadLevel("TrackSelector");
 	}
 
 	public void ExitGame()

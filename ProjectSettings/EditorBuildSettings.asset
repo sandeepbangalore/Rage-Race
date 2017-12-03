@@ -15,5 +15,8 @@ EditorBuildSettings:
     path: Assets/PlayerSelector/_Scene/PlayerSelector.unity
     guid: c5197eb56e7570f4e8f078ee94fb2359
   - enabled: 1
+    path: Assets/PlayerSelector/_Scene/TrackSelector.unity
+    guid: 9f8bc8cd8318c1444bbfc349dc0297b0
+  - enabled: 1
     path: Assets/Scene/track.unity
     guid: 15dce43dfa240374d881ef5f4a2b3f03

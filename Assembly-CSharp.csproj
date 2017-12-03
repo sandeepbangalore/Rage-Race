@@ -62,6 +62,8 @@
      <Compile Include="Assets\PlayerSelector\Scripts\CharacterDetails.cs" />
      <Compile Include="Assets\PlayerSelector\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\PlayerSelector\Scripts\SceneManagerLocal.cs" />
+     <Compile Include="Assets\PlayerSelector\Scripts\TrackDetails.cs" />
+     <Compile Include="Assets\PlayerSelector\Scripts\TrackManager.cs" />
      <Compile Include="Assets\PowerUp\Scripts\CustomizablePowerUp.cs" />
      <Compile Include="Assets\PowerUp\Scripts\PowerUpManager.cs" />
      <Compile Include="Assets\PowerUp\Scripts\PowerUpRotation.cs" />
@@ -123,6 +125,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
      <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Normal-Bumped.shader" />
      <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Diffuse.shader" />
+     <None Include="Assets\Skybox\Cubemaps\mnight.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />

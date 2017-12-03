@@ -5,6 +5,7 @@ using UnityEngine;
 public class SceneManagerLocal : MonoBehaviour {
 
 	private string currentName = "";
+	private string trackName = "";
 	private static SceneManagerLocal _Instance = null;
 	public static SceneManagerLocal Instance{
 		get{ 
@@ -33,5 +34,13 @@ public class SceneManagerLocal : MonoBehaviour {
 
 	public void setCurrent(string name) {
 		currentName = name;
+	}
+
+	public void setTrack(string name) {
+		trackName = name;
+	}
+
+	public string getTrack() {
+		return trackName;
 	}
 }
