@@ -2522,7 +2522,7 @@ MonoBehaviour:
   maxTime: 1
   maxBoostTime: 0.5
   hasSlowDown: 0
-  hasDriller: 1
+  hasDriller: 0
   hasHoming: 0
   powerupSlots: []
   slotsAvailable: 1
@@ -2534,7 +2534,7 @@ MonoBehaviour:
   slow_sprite: {fileID: 21300000, guid: 2b053213be1770942a5edff72829fa5e, type: 3}
   driller_sprite: {fileID: 21300000, guid: 539652b5501db244ea39a7e4d9bb478a, type: 3}
   homing_sprite: {fileID: 21300000, guid: 643ea5532e418f447b845d6e83c6907b, type: 3}
-  default_sprite: {fileID: 0}
+  default_sprite: {fileID: 21300000, guid: a513f0afe4a5b5a4e9ae02691a378700, type: 3}
   image1: {fileID: 0}
   image2: {fileID: 0}
 --- !u!114 &114471190510271166

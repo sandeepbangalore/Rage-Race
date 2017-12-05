@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 114314195807140400}
   - component: {fileID: 114683286462526924}
   - component: {fileID: 96726302600713216}
+  - component: {fileID: 114254237581845616}
   m_Layer: 0
   m_Name: sporty_granny
   m_TagString: NPC
@@ -3003,6 +3004,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &114254237581845616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185380664262080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67993ef5a575f1545b7eb6dd5780e4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Sporty Granny
+  speed: 0
+  attack: 0
+  defense: 0
 --- !u!114 &114314195807140400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3040,6 +3056,13 @@ MonoBehaviour:
     type: 2}
   Driller: {fileID: 1755938521150968, guid: eb58b7cb24c70fc42a1e677b6200f7db, type: 2}
   Homing: {fileID: 1727290189784546, guid: eebf4c3011c43c9479deff328e6f49ce, type: 2}
+  speed_sprite: {fileID: 0}
+  slow_sprite: {fileID: 0}
+  driller_sprite: {fileID: 0}
+  homing_sprite: {fileID: 0}
+  default_sprite: {fileID: 0}
+  image1: {fileID: 0}
+  image2: {fileID: 0}
 --- !u!114 &114752621662380764
 MonoBehaviour:
   m_ObjectHideFlags: 1

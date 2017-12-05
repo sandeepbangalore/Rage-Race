@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 114340360479419500}
   - component: {fileID: 114482559139215296}
   - component: {fileID: 96041079165823504}
+  - component: {fileID: 114909323547781362}
   m_Layer: 0
   m_Name: theboss
   m_TagString: NPC
@@ -2086,7 +2087,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1408351963153212}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 726.7936, y: 0.39341235, z: 121.600555}
+  m_LocalPosition: {x: 720, y: 0.3905398, z: 128}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4206807420308136}
@@ -2953,6 +2954,13 @@ MonoBehaviour:
     type: 2}
   Driller: {fileID: 1755938521150968, guid: eb58b7cb24c70fc42a1e677b6200f7db, type: 2}
   Homing: {fileID: 1727290189784546, guid: eebf4c3011c43c9479deff328e6f49ce, type: 2}
+  speed_sprite: {fileID: 0}
+  slow_sprite: {fileID: 0}
+  driller_sprite: {fileID: 0}
+  homing_sprite: {fileID: 0}
+  default_sprite: {fileID: 0}
+  image1: {fileID: 0}
+  image2: {fileID: 0}
 --- !u!114 &114804605812328806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3019,6 +3027,21 @@ MonoBehaviour:
   debugAgentHasPath: 0
   debugMecanimInputTurn: 0
   debugMecanimInputForward: 0
+--- !u!114 &114909323547781362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408351963153212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67993ef5a575f1545b7eb6dd5780e4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Boss Man
+  speed: 0
+  attack: 0
+  defense: 0
 --- !u!135 &135075641701221806
 SphereCollider:
   m_ObjectHideFlags: 1

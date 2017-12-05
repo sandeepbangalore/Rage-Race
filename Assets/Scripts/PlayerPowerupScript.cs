@@ -154,10 +154,6 @@ public class PlayerPowerupScript : MonoBehaviour {
 			GetComponent<TrailRenderer> ().enabled = true;
 			if (gameObject.tag == "Player") {
 				moveScript.speedPowerUp = 3.0f;
-				if(image1.sprite == default_sprite)
-					image1.sprite = speed_sprite;
-				else if(image2.sprite == default_sprite)
-					image2.sprite = speed_sprite;
 			} else if (gameObject.tag == "NPC") {
 				AIscript.speedPowerUp = 3.0f;
 			}
@@ -243,6 +239,12 @@ public class PlayerPowerupScript : MonoBehaviour {
 		if (other.gameObject.tag == "Powerup") {
 			EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
 			Debug.Log("Speedup");
+			if(moveScript != null) {
+				if(image1.sprite == default_sprite)
+					image1.sprite = speed_sprite;
+				else if(image2.sprite == default_sprite)
+					image2.sprite = speed_sprite;
+			}
 			speedUp = true;
 			Destroy (other.transform.parent.gameObject);
 		}

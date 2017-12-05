@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 114029744225485108}
   - component: {fileID: 114678476908092728}
   - component: {fileID: 96028151760329034}
+  - component: {fileID: 114341940883212572}
   m_Layer: 0
   m_Name: ty
   m_TagString: NPC
@@ -1747,8 +1748,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1396828973411942}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 721.0429, y: 1.0911741, z: 121.39406}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 720, y: 0.39, z: 125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4808840313777036}
@@ -2391,6 +2392,21 @@ MonoBehaviour:
   debugAgentHasPath: 0
   debugMecanimInputTurn: 0
   debugMecanimInputForward: 0
+--- !u!114 &114341940883212572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396828973411942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67993ef5a575f1545b7eb6dd5780e4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Ty
+  speed: 0
+  attack: 0
+  defense: 0
 --- !u!114 &114678476908092728
 MonoBehaviour:
   m_ObjectHideFlags: 1

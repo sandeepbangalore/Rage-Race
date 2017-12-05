@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
 	public CameraDolly dollyCam;
 	public ThirdPersonCamera playerCam;
 	public Text playerPositionGUI;
+	public Image image1;
+	public Image image2;
 	public Transform[] NPCLocations;
 	public GameObject[] NPCs;
 	public GameObject leftWaypoints;
@@ -77,13 +79,18 @@ public class GameManager : MonoBehaviour {
 		Transform[] dummyRightWayPoints = rightWaypoints.GetComponentsInChildren<Transform> ();
 		Transform[] newArrayRight = new Transform[dummyRightWayPoints.Length - 1];
 		System.Array.Copy(dummyRightWayPoints, 1, newArrayRight, 0, newArrayRight.Length);
+		playerSelectedName = selectedPlayer();
 		foreach (Transform location in NPCLocations) {
-			GameObject dummy = Instantiate (NPCs [Random.Range (0, NPCs.Length)], location.position,location.rotation, parent) as GameObject; // BV
+			GameObject NPC_current = NPCs [Random.Range (0, NPCs.Length)];
+			while(NPC_current.GetComponent<CharacterDetails>().name == playerSelectedName) {
+				NPC_current = NPCs [Random.Range (0, NPCs.Length)];
+			}
+			GameObject dummy = Instantiate (NPC_current, location.position,location.rotation, parent) as GameObject; // BV
 			PositionManager dummyPM = dummy.GetComponent<PositionManager> ();
 			dummyPM.leftWaypoints = newArrayLeft;
 			dummyPM.rightWaypoints = newArrayRight;
 		}
-        playerSelectedName = selectedPlayer();
+        // playerSelectedName = selectedPlayer();
 		mainPlayer = playerG [0];
         foreach (GameObject playerSelected in playerG) {
             if (playerSelected.GetComponent<CharacterDetails>().name == playerSelectedName) {
@@ -100,6 +107,9 @@ public class GameManager : MonoBehaviour {
 		dollyCam.camPos = playerGO.transform.Find ("camPos");
 		finishPM.player = playerPM;
 		mmf.player = playerGO.transform;
+		PlayerPowerupScript playerPPS = playerGO.GetComponent<PlayerPowerupScript> ();
+		playerPPS.image1 = image1;
+		playerPPS.image2 = image2;
 	}
 
 	// Use this for initialization
