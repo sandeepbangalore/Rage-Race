@@ -14,6 +14,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
+using UnityEngine.UI;
 
 
 public class PlayerPowerupScript : MonoBehaviour {
@@ -40,6 +41,15 @@ public class PlayerPowerupScript : MonoBehaviour {
     public Transform slowdownblock;
 	public GameObject Driller;
 	public GameObject Homing;
+
+	public Sprite speed_sprite;
+	public Sprite slow_sprite;
+	public Sprite driller_sprite;
+	public Sprite homing_sprite;
+	public Sprite default_sprite;
+
+	public Image image1;
+	public Image image2;
 
 	// Use this for initialization
 	void Start () {
@@ -94,6 +104,8 @@ public class PlayerPowerupScript : MonoBehaviour {
 				slotsAvailable = true;
 				////Sound effect of dropping block
 			}
+			if(moveScript != null)
+				image1.sprite = default_sprite;
 		}
 
 		if (Input.GetButtonDown ("Fire2")) {
@@ -133,6 +145,8 @@ public class PlayerPowerupScript : MonoBehaviour {
 				slotsAvailable = true;
 				////Sound effect of dropping block
 			}
+			if(moveScript != null)
+				image2.sprite = default_sprite;
 		}
 			
 
@@ -140,6 +154,10 @@ public class PlayerPowerupScript : MonoBehaviour {
 			GetComponent<TrailRenderer> ().enabled = true;
 			if (gameObject.tag == "Player") {
 				moveScript.speedPowerUp = 3.0f;
+				if(image1.sprite == default_sprite)
+					image1.sprite = speed_sprite;
+				else if(image2.sprite == default_sprite)
+					image2.sprite = speed_sprite;
 			} else if (gameObject.tag == "NPC") {
 				AIscript.speedPowerUp = 3.0f;
 			}
@@ -150,6 +168,10 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 					if (gameObject.tag == "Player") {
 						moveScript.speedPowerUp = 1.0f;
+						if(image1.sprite == speed_sprite)
+							image1.sprite = default_sprite;
+						else if(image2.sprite == speed_sprite)
+							image2.sprite = default_sprite;
 					} else if (gameObject.tag == "NPC") {
 						AIscript.speedPowerUp = 1.0f;
 					}
@@ -237,9 +259,13 @@ public class PlayerPowerupScript : MonoBehaviour {
 				hasSlowDown = true;
 				if (powerupSlots [0] == null || powerupSlots [0] == "") {
 					powerupSlots [0] = "SlowPickup";
+					if(moveScript != null)
+						image1.sprite = slow_sprite;
 					Destroy (other.transform.parent.gameObject);
 				} else if (powerupSlots [1] == null || powerupSlots [1] == "") {
 					powerupSlots [1] = "SlowPickup";
+					if(moveScript != null)
+						image2.sprite = slow_sprite;
 					Destroy (other.transform.parent.gameObject);
 				}
 				else
@@ -254,9 +280,13 @@ public class PlayerPowerupScript : MonoBehaviour {
 				hasDriller = true;
 				if (powerupSlots [0] == null || powerupSlots [0] == "") {
 					powerupSlots [0] = "DrillerPickup";
+					if(moveScript != null)
+						image1.sprite = driller_sprite;
 					Destroy (other.transform.parent.gameObject);
 				} else if (powerupSlots [1] == null || powerupSlots [1] == "") {
 					powerupSlots [1] = "DrillerPickup";
+					if(moveScript != null)
+						image2.sprite = driller_sprite;
 					Destroy (other.transform.parent.gameObject);
 				}
 				else
@@ -271,9 +301,13 @@ public class PlayerPowerupScript : MonoBehaviour {
 				hasHoming = true;
 				if (powerupSlots [0] == null || powerupSlots [0] == "") {
 					powerupSlots [0] = "HomingPickup";
+					if(moveScript != null)
+						image1.sprite = homing_sprite;
 					Destroy (other.transform.parent.gameObject);
 				} else if (powerupSlots [1] == null || powerupSlots [1] == "") {
 					powerupSlots [1] = "HomingPickup";
+					if(moveScript != null)
+						image2.sprite = homing_sprite;
 					Destroy (other.transform.parent.gameObject);
 				}
 				else
