@@ -3045,7 +3045,7 @@ MonoBehaviour:
   Driller: {fileID: 1755938521150968, guid: eb58b7cb24c70fc42a1e677b6200f7db, type: 2}
   Homing: {fileID: 1727290189784546, guid: eebf4c3011c43c9479deff328e6f49ce, type: 2}
   speed_sprite: {fileID: 21300000, guid: 884b50532e2c6f64d9b2a8c11dc7494d, type: 3}
-  slow_sprite: {fileID: 21300000, guid: 2b053213be1770942a5edff72829fa5e, type: 3}
+  slow_sprite: {fileID: 21300000, guid: f3cec1c8cffd0284796686fe226491ed, type: 3}
   driller_sprite: {fileID: 21300000, guid: 539652b5501db244ea39a7e4d9bb478a, type: 3}
   homing_sprite: {fileID: 21300000, guid: 643ea5532e418f447b845d6e83c6907b, type: 3}
   default_sprite: {fileID: 21300000, guid: a513f0afe4a5b5a4e9ae02691a378700, type: 3}
