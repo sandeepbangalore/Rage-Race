@@ -3040,7 +3040,7 @@ MonoBehaviour:
   hasHoming: 0
   powerupSlots: []
   slotsAvailable: 1
-  slowdownblock: {fileID: 4903692734540580, guid: 11cd5d55bc030754c9e5e5d8b0552d93,
+  slowdownblock: {fileID: 4886358149069940, guid: cda48ca5b4b5dd746bac0cd36b595002,
     type: 2}
   Driller: {fileID: 1755938521150968, guid: eb58b7cb24c70fc42a1e677b6200f7db, type: 2}
   Homing: {fileID: 1727290189784546, guid: eebf4c3011c43c9479deff328e6f49ce, type: 2}

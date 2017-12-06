@@ -231,6 +231,14 @@ public class PlayerPowerupScript : MonoBehaviour {
 			}
 		}
 	}
+
+	private void OnCollisionEnter(Collision collision) {
+		if (collision.gameObject.tag == "Slowdown") {
+			//EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
+			slowDown = true;
+			Destroy (collision.gameObject);
+		}
+	}
 		
 
     private void OnTriggerEnter(Collider other)
@@ -248,12 +256,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 			speedUp = true;
 			Destroy (other.transform.parent.gameObject);
 		}
-
-		if (other.gameObject.tag == "Slowdown") {
-			//EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
-			slowDown = true;
-			Destroy (other.gameObject);
-		}
+			
 
 		if (other.gameObject.tag == "SlowPickup") {
 			if (areSlotsAvailable ()) {
@@ -274,6 +277,12 @@ public class PlayerPowerupScript : MonoBehaviour {
 					slotsAvailable = false;
 			} else
 				Debug.Log ("Slots not available");
+		}
+
+		if (other.gameObject.tag == "Slowdown") {
+			//EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
+			slowDown = true;
+			Destroy (other.gameObject);
 		}
 
 		if (other.gameObject.tag == "DrillerPickup") {
