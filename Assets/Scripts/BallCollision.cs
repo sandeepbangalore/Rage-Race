@@ -17,14 +17,15 @@ public class BallCollision : MonoBehaviour {
 
 	void OnCollisionEnter (Collision theCollision)
 	{
-//		if(theCollision.gameObject.tag == "Player" || theCollision.gameObject.tag == "NPC")
-//		{
-//			if (theCollision.gameObject.tag == "Player") {
-//				theCollision.gameObject.GetComponent<ThirdPersonCharacter> ().Stunned ();
-//			}
-//			if (theCollision.gameObject.tag == "NPC") {
-//				theCollision.gameObject.GetComponent<AIController> ().Stunned ();
-//			}
-//		}
+		if(theCollision.gameObject.tag == "Player" || theCollision.gameObject.tag == "NPC")
+		{
+			if (theCollision.gameObject.tag == "Player") {
+				theCollision.gameObject.GetComponent<ThirdPersonCharacter> ().Stunned ();
+			}
+			if (theCollision.gameObject.tag == "NPC") {
+				theCollision.gameObject.GetComponent<AIController> ().Stunned ();
+			}
+			Destroy (gameObject, 0.5f);
+		}
 	}
 }
