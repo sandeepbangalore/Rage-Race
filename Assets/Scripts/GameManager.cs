@@ -150,24 +150,25 @@ public class GameManager : MonoBehaviour {
 			resultsCanvas.enabled = true;
 			foreach (PositionManager runner in results) {
 				int place = System.Array.IndexOf (results, runner) + 1;
+				string Name = runner.gameObject.name.Substring(0,runner.gameObject.name.Length-7);
 				switch (place) {
 				case 1: 
 					if (runner.gameObject.tag != "Player")
-						resultsText += "1ST - " + runner.gameObject.name+"\n";
+						resultsText += "1ST - " + Name+"\n";
 					else
 						resultsText += "<color=red>1ST - Player</color>\n";
 					break;
 				case 2:
 					if (runner.gameObject.tag != "Player")
-						resultsText += "2ND - " + runner.gameObject.name+"\n";
+						resultsText += "2ND - " + Name+"\n";
 					else
 						resultsText += "<color=red>2ND - Player</color>\n";
 					break;
 				case 3:
 					if (runner.gameObject.tag != "Player")
-						resultsText += "3RD - " + runner.gameObject.name+"\n";
+						resultsText += "3RD - " + Name+"\n";
 					else
-                        //resultsText += "<color=red>3RD - " + runner.gameObject.name+"</color>\n";  // If we want to have custom names for later 
+                        //resultsText += "<color=red>3RD - " + Name+"</color>\n";  // If we want to have custom names for later 
                         resultsText += "<color=red>3RD - Player</color>\n";
                         break;
 				case 4:
@@ -178,7 +179,7 @@ public class GameManager : MonoBehaviour {
 				case 9:
 				case 10:
 					if (runner.gameObject.tag != "Player")
-						resultsText += place+"TH - " + runner.gameObject.name+"\n";
+						resultsText += place+"TH - " + Name+"\n";
 					else
 						resultsText += "<color=red>"+place +"TH - Player</color>\n";
 					break;
