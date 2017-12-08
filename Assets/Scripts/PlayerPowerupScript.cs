@@ -12,6 +12,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
 using UnityEngine.UI;
@@ -23,12 +24,15 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 	private ThirdPersonCharacter moveScript;
 	private AIController AIscript;
+    private PositionManager positionManager;
 	public float maxTime = 2.0f;
     public float maxBoostTime = 0.5f;
 
     private float speedtimer;
 	private float slowtimer;
     private float boosttimer;
+
+    private bool[] shouldUseAIpowerups = null;
 
     private bool speedUp = false;
 	private bool slowDown = false;
@@ -60,15 +64,26 @@ public class PlayerPowerupScript : MonoBehaviour {
 			moveScript = GetComponent<ThirdPersonCharacter> ();
 		} else if (gameObject.tag == "NPC") {
 			AIscript = GetComponent<AIController> ();
+            positionManager = GetComponent<PositionManager>();
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
 
-		if (Input.GetButtonDown ("Fire1") || (AIscript != null && AIscript.getShouldUseSlow())) {
+        // initiate the boolean array of whether an AI should use powerups
+        // bools match this order of powerups: slow, driller, homing
+        // should remain false if this script is attached to the player
+        shouldUseAIpowerups = new bool[] { false, false, false };
+	}
+
+    // Update is called once per frame
+    void Update() {
+        // update whether AI wants to use powerups if this gameobject is an NPC
+        if (AIscript != null)
+        {
+            shouldUseAIpowerups = AIscript.getShouldUsePowerups();
+        }
+
+		if (Input.GetButtonDown ("Fire1") || shouldUseAIpowerups.Contains(true)) {
 			//Debug.Log ("Fire1!!");
-			if (hasSlowDown && powerupSlots[0] == "SlowPickup") {
+			if (hasSlowDown && powerupSlots[0] == "SlowPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation;
@@ -80,7 +95,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 				slotsAvailable = true;
 				////Sound effect of dropping block
 			}
-			if (hasDriller && powerupSlots[0] == "DrillerPickup") {
+			if (hasDriller && powerupSlots[0] == "DrillerPickup" && (AIscript == null || shouldUseAIpowerups[1])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
@@ -92,7 +107,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 				slotsAvailable = true;
 				////Sound effect of dropping block
 			}
-			if (hasHoming && powerupSlots[0] == "HomingPickup") {
+			if (hasHoming && powerupSlots[0] == "HomingPickup" && (AIscript == null || shouldUseAIpowerups[2])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
@@ -108,8 +123,8 @@ public class PlayerPowerupScript : MonoBehaviour {
 				image1.sprite = default_sprite;
 		}
 
-		if (Input.GetButtonDown ("Fire2")) {
-			if (hasSlowDown && powerupSlots[1] == "SlowPickup") {
+		if (Input.GetButtonDown ("Fire2") || shouldUseAIpowerups.Contains(true)) {
+			if (hasSlowDown && powerupSlots[1] == "SlowPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation;
@@ -121,7 +136,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 				slotsAvailable = true;
 				////Sound effect of dropping block
 			}
-			if (hasDriller && powerupSlots[1] == "DrillerPickup") {
+			if (hasDriller && powerupSlots[1] == "DrillerPickup" && (AIscript == null || shouldUseAIpowerups[1])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
@@ -133,7 +148,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 				slotsAvailable = true;
 				////Sound effect of dropping block
 			}
-			if (hasHoming && powerupSlots[1] == "HomingPickup") {
+			if (hasHoming && powerupSlots[1] == "HomingPickup" && (AIscript == null || shouldUseAIpowerups[2])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
@@ -231,6 +246,12 @@ public class PlayerPowerupScript : MonoBehaviour {
 			}
 		}
 	}
+
+    // gives AI a boost after warping behind player when stuck
+    public void AICatchUpCheat()
+    {
+        boost = true;
+    }
 
 	private void OnCollisionEnter(Collision collision) {
 		if (collision.gameObject.tag == "Slowdown") {
@@ -338,6 +359,10 @@ public class PlayerPowerupScript : MonoBehaviour {
         {
             Debug.Log("FIRE FIRE FIRE!");
             gameObject.transform.position = GameObject.Find("RespawnPoint").transform.position;
+            if (AIscript != null)
+            {
+                positionManager.diedOnRamp();
+            }
         }
     }
 

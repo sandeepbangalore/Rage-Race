@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class GameManager : MonoBehaviour {
 	
@@ -80,18 +81,35 @@ public class GameManager : MonoBehaviour {
 		Transform[] newArrayRight = new Transform[dummyRightWayPoints.Length - 1];
 		System.Array.Copy(dummyRightWayPoints, 1, newArrayRight, 0, newArrayRight.Length);
 		playerSelectedName = selectedPlayer();
-		foreach (Transform location in NPCLocations) {
-			GameObject NPC_current = NPCs [Random.Range (0, NPCs.Length)];
-			while(NPC_current.GetComponent<CharacterDetails>().name == playerSelectedName) {
-				NPC_current = NPCs [Random.Range (0, NPCs.Length)];
-			}
-			GameObject dummy = Instantiate (NPC_current, location.position,location.rotation, parent) as GameObject; // BV
-			PositionManager dummyPM = dummy.GetComponent<PositionManager> ();
-			dummyPM.leftWaypoints = newArrayLeft;
-			dummyPM.rightWaypoints = newArrayRight;
-		}
+        var randNPCs = Enumerable.Range(0, NPCs.Length).OrderBy(x => Random.value).ToArray(); // randomly sorts NPC models
+        int j = 0; // index for random NPC model array
+        for (int i = 0; i < NPCLocations.Length; i++)
+        {
+            Transform location = NPCLocations[i];
+            GameObject NPC_current = NPCs[randNPCs[j++]];
+            while (NPC_current.GetComponent<CharacterDetails>().name == playerSelectedName)
+            {
+                NPC_current = NPCs[randNPCs[j++]];
+            }
+            GameObject dummy = Instantiate(NPC_current, location.position, location.rotation, parent) as GameObject; // BV
+            PositionManager dummyPM = dummy.GetComponent<PositionManager>();
+            dummyPM.leftWaypoints = newArrayLeft;
+            dummyPM.rightWaypoints = newArrayRight;
+        }
+        //foreach (Transform location in NPCLocations)
+        //{
+        //    GameObject NPC_current = NPCs[Random.Range(0, NPCs.Length)];
+        //    while (NPC_current.GetComponent<CharacterDetails>().name == playerSelectedName)
+        //    {
+        //        NPC_current = NPCs[Random.Range(0, NPCs.Length)];
+        //    }
+        //    GameObject dummy = Instantiate(NPC_current, location.position, location.rotation, parent) as GameObject; // BV
+        //    PositionManager dummyPM = dummy.GetComponent<PositionManager>();
+        //    dummyPM.leftWaypoints = newArrayLeft;
+        //    dummyPM.rightWaypoints = newArrayRight;
+        //}
         // playerSelectedName = selectedPlayer();
-		mainPlayer = playerG [0];
+        mainPlayer = playerG [0];
         foreach (GameObject playerSelected in playerG) {
             if (playerSelected.GetComponent<CharacterDetails>().name == playerSelectedName) {
                 mainPlayer = playerSelected;

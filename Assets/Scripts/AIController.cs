@@ -9,15 +9,18 @@ using UnityEngine.UI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class AIController : MonoBehaviour
 {
-    public enum State // currently unused
-    {
-        SetNewGoal,
-        PathToWaypoint
+    //public enum State // currently unused
+    //{
+    //    SetNewGoal,
+    //    PathToWaypoint
 
-    }
+    //}
 
-	public float speedPowerUp = 1f;
+    private PlayerPowerupScript powerup = null;
+    public float speedPowerUp = 1f;
     private bool shouldUseSlow = false;
+    private bool shouldUseDriller = false;
+    private bool shouldUseHoming = false;
 
     public float moveSpeedMultiplier = 1f;
 
@@ -25,7 +28,7 @@ public class AIController : MonoBehaviour
     private Vector3 nextWaypoint;
     private bool isPathingToPowerup = false;
 
-    public State state = State.SetNewGoal; // currently unused
+    //public State state = State.SetNewGoal; // currently unused
 
     public float waitTime;
     protected float beginWaitTime;
@@ -89,6 +92,9 @@ public class AIController : MonoBehaviour
         aiSteer.stopAtNextWaypoint = false;
         agent = GetComponent<NavMeshAgent>();
 
+        // get powerup script
+        powerup = this.GetComponent<PlayerPowerupScript>();
+
         // get position manager script
         positionManager = this.GetComponent<PositionManager>();
         positionManager.setWaypoints(true); // use random waypoints
@@ -131,7 +137,7 @@ public class AIController : MonoBehaviour
     bool hasReachedTarget(Vector3 loc, float difference)
     {
         float distance = (loc - transform.position).magnitude;
-        return distance < difference;
+        return distance <= difference;
     }
 
     // if AI agent has not moved very far from their last recorded position
@@ -149,20 +155,41 @@ public class AIController : MonoBehaviour
             {
                 debugPrint("I'm warping!!");
                 agent.Warp(nextWaypoint);
+                powerup.AICatchUpCheat();
             }
 
         }
         lastLocation = transform.position;
     }
 
-    public bool getShouldUseSlow()
+    public bool[] getShouldUsePowerups()
     {
-        return shouldUseSlow;
+        return new bool[] { shouldUseSlow, shouldUseDriller, shouldUseHoming };
     }
 
+    void updateShouldUsePowerups()
+    {
+        updateShouldUseSlow();
+        updateShouldUseDriller(10f);
+        updateShouldUseHoming();
+    }
+
+    // AI should use the slow powerup if it is in front of the player
     void updateShouldUseSlow()
     {
         shouldUseSlow = positionManager.isBehindPlayer(true, -1); // check if agent is in front of player using race position, not waypoints
+    }
+
+    // AI should use the driller powerup if there is at least 1 runner in front of this AI a minimum distance away
+    void updateShouldUseDriller(float minDist)
+    {
+        shouldUseDriller = positionManager.getPosition() > 1 && positionManager.getDistanceToFirstPlace() > minDist; 
+    }
+
+    // AI should use the homing powerup if it's not in 1st place
+    void updateShouldUseHoming()
+    {
+        shouldUseHoming = positionManager.getPosition() != 1;
     }
 
     // Update is called once per frame
@@ -171,7 +198,7 @@ public class AIController : MonoBehaviour
         if (hasGameStarted())
         {
             updateNextWaypoint();
-            updateShouldUseSlow();
+            updateShouldUsePowerups();
 
             if (Time.timeSinceLevelLoad - beginWaitTime > waitTime)
             {
@@ -190,7 +217,8 @@ public class AIController : MonoBehaviour
 
     }
 
-	public void Stunned(){
+	public void Stunned()
+    {
 		anim.SetTrigger ("Stun");
 	}
 }

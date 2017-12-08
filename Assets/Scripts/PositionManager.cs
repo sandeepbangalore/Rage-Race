@@ -35,6 +35,20 @@ public class PositionManager : MonoBehaviour {
 		positions ();
 	}
 
+    // sometimes AI may get knocked backwards on collision
+    // if this happens, make sure nextwaypoint and current waypoint position are correct
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
+
+    // resets the waypoint progress/nextwaypoint after dying on the ramp
+    // (assumes has to backtrack 2 waypoints)
+    public void diedOnRamp()
+    {
+        waypointProgress -= 2;
+    }
+
     // creates waypoints for the whole track
     public void setWaypoints(bool randWaypts)
     {
@@ -60,6 +74,30 @@ public class PositionManager : MonoBehaviour {
             waypoints[i] = waypt;
             nextWaypoint = i == 0 ? waypt : nextWaypoint; // default nextWaypoint to the first one
         }
+    }
+
+    // gets the race position of this gameobject (starting at 1)
+    public int getPosition()
+    {
+        int position = 1;
+        System.Array.Sort(runners, sortByPosition);
+
+        foreach (PositionManager runner in runners)
+        {
+            if (runner == this)
+            {
+                position += System.Array.IndexOf(runners, runner);
+            }
+        }
+        return position;
+    }
+
+    // gets the straight line distance of this gameobject to the first place runner gameobject
+    public float getDistanceToFirstPlace()
+    {
+        System.Array.Sort(runners, sortByPosition);
+        PositionManager firstPlaceRunner = runners[0];
+        return (transform.position - firstPlaceRunner.transform.position).magnitude;
     }
 
     // getter for isPlayer (is this GameObject the player?)
@@ -89,7 +127,7 @@ public class PositionManager : MonoBehaviour {
     // Update waypoint progress and the next waypoint if this GameObject has reached nextWaypoint
     void updateWaypointProgress()
     {
-        if (hasReachedTarget(nextWaypoint, 20f))
+        if (hasReachedTarget(nextWaypoint, 10f))
         {
             nextWaypoint = waypoints[++waypointProgress];
         }
@@ -208,20 +246,20 @@ public class PositionManager : MonoBehaviour {
     bool hasReachedTarget(Vector3 loc, float difference)
     {
         float distance = (loc - transform.position).magnitude;
-        return distance < difference;
+        return distance <= difference;
     }
 
     // Update is called once per frame
     void Update () {
         updateWaypointProgress();
-        if (positionText != null)
+        if (positionText != null && MyGameManager.getGameState() == GameManager.States.Race)
         {
             updatePositionDisplay();
         }
 
-		if (MyGameManager.getGameState() == GameManager.States.Finish) {
+		//if (MyGameManager.getGameState() == GameManager.States.Finish) {
 
-		}
+		//}
 	}
 
 	public void finalResults()
@@ -230,7 +268,8 @@ public class PositionManager : MonoBehaviour {
 		MyGameManager.finalResults (runners);
 	}
 
-	public void positions(){
+	public void positions()
+    {
 		System.Array.Sort (runners, sortByPosition);
 		MyGameManager.currentPositions (runners);
 	}

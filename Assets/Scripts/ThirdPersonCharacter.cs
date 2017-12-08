@@ -240,7 +240,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		public void Stunned(){
+            m_Animator.speed = 3f;
 			m_Animator.SetTrigger ("Stun");
+            m_Animator.speed = 1f;
 		}
 	}
 }
