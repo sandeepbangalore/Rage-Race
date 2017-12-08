@@ -39,12 +39,14 @@ public class PlayerPowerupScript : MonoBehaviour {
 	public bool hasSlowDown = false;
 	public bool hasDriller = false;
 	public bool hasHoming = false;
+	public bool hasGasPickup = false;
     private bool boost = false;
 	public string[] powerupSlots;
 	public bool slotsAvailable = true;
     public Transform slowdownblock;
 	public GameObject Driller;
 	public GameObject Homing;
+	public GameObject GasCloud;
 
 	public Sprite speed_sprite;
 	public Sprite slow_sprite;
@@ -95,6 +97,19 @@ public class PlayerPowerupScript : MonoBehaviour {
 				slotsAvailable = true;
 				////Sound effect of dropping block
 			}
+			if (hasGasPickup && powerupSlots[0] == "GasPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
+				Vector3 pos = gameObject.transform.position;
+				Vector3 dir = gameObject.transform.forward;
+				Quaternion rot = gameObject.transform.rotation;
+				Vector3 spawnPoint = pos + dir * -2;
+				Instantiate (GasCloud, spawnPoint, rot);
+				if (powerupSlots[1] != "GasPickup")
+					hasGasPickup = false;
+				powerupSlots [0] = "";
+				slotsAvailable = true;
+				////Sound effect of gas cloud
+			}
+
 			if (hasDriller && powerupSlots[0] == "DrillerPickup" && (AIscript == null || shouldUseAIpowerups[1])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
@@ -136,6 +151,19 @@ public class PlayerPowerupScript : MonoBehaviour {
 				slotsAvailable = true;
 				////Sound effect of dropping block
 			}
+			if (hasGasPickup && powerupSlots[1] == "GasPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
+				Vector3 pos = gameObject.transform.position;
+				Vector3 dir = gameObject.transform.forward;
+				Quaternion rot = gameObject.transform.rotation;
+				Vector3 spawnPoint = pos + dir * -2;
+				Instantiate (GasCloud, spawnPoint, rot);
+				if (powerupSlots[0] != "GasPickup")
+					hasSlowDown = false;
+				powerupSlots [1] = "";
+				slotsAvailable = true;
+				////Sound effect of gas cloud
+			}
+
 			if (hasDriller && powerupSlots[1] == "DrillerPickup" && (AIscript == null || shouldUseAIpowerups[1])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
@@ -255,8 +283,15 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 	private void OnCollisionEnter(Collision collision) {
 		if (collision.gameObject.tag == "Slowdown") {
-			//EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
-			slowDown = true;
+			//If collided with log
+	
+			if (gameObject.tag == "Player") {
+				moveScript.Stunned ();
+			}
+			if (gameObject.tag == "NPC") {
+				AIscript.Stunned ();
+			}
+
 			Destroy (collision.gameObject);
 		}
 	}
@@ -300,11 +335,32 @@ public class PlayerPowerupScript : MonoBehaviour {
 				Debug.Log ("Slots not available");
 		}
 
-		if (other.gameObject.tag == "Slowdown") {
-			//EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
+		if (other.gameObject.tag == "GasCloudTag") {
 			slowDown = true;
-			Destroy (other.gameObject);
 		}
+
+		if (other.gameObject.tag == "GasPickup") {
+			if (areSlotsAvailable ()) {
+				EventManager.TriggerEvent<PowerUpEvent, Vector3> (transform.position);
+				hasGasPickup = true;
+				if (powerupSlots [0] == null || powerupSlots [0] == "") {
+					powerupSlots [0] = "GasPickup";
+					if(moveScript != null)
+						image1.sprite = slow_sprite;
+					Destroy (other.transform.parent.gameObject);
+				} else if (powerupSlots [1] == null || powerupSlots [1] == "") {
+					powerupSlots [1] = "GasPickup";
+					if(moveScript != null)
+						image2.sprite = slow_sprite;
+					Destroy (other.transform.parent.gameObject);
+				}
+				else
+					slotsAvailable = false;
+			} else
+				Debug.Log ("Slots not available");
+		}
+
+
 
 		if (other.gameObject.tag == "DrillerPickup") {
 			if (areSlotsAvailable ()) {

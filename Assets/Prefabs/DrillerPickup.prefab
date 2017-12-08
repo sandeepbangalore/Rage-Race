@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 54604723729609598}
   m_Layer: 8
   m_Name: PowerUp
-  m_TagString: SlowPickup
+  m_TagString: DrillerPickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 114323661806634884}
   m_Layer: 8
   m_Name: InnerPowerUp
-  m_TagString: SlowPickup
+  m_TagString: DrillerPickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

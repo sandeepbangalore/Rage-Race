@@ -16,6 +16,8 @@ TagManager:
   - DrillerPickup
   - Map
   - HomingPickup
+  - GasPickup
+  - GasCloudTag
   layers:
   - Default
   - TransparentFX
