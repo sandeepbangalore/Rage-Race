@@ -50,6 +50,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 	public Sprite speed_sprite;
 	public Sprite slow_sprite;
+	public Sprite gas_sprite;
 	public Sprite driller_sprite;
 	public Sprite homing_sprite;
 	public Sprite default_sprite;
@@ -346,12 +347,12 @@ public class PlayerPowerupScript : MonoBehaviour {
 				if (powerupSlots [0] == null || powerupSlots [0] == "") {
 					powerupSlots [0] = "GasPickup";
 					if(moveScript != null)
-						image1.sprite = slow_sprite;
+						image1.sprite = gas_sprite;
 					Destroy (other.transform.parent.gameObject);
 				} else if (powerupSlots [1] == null || powerupSlots [1] == "") {
 					powerupSlots [1] = "GasPickup";
 					if(moveScript != null)
-						image2.sprite = slow_sprite;
+						image2.sprite = gas_sprite;
 					Destroy (other.transform.parent.gameObject);
 				}
 				else

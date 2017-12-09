@@ -3047,7 +3047,8 @@ MonoBehaviour:
   Homing: {fileID: 1727290189784546, guid: eebf4c3011c43c9479deff328e6f49ce, type: 2}
   GasCloud: {fileID: 1122220598554732, guid: cda48ca5b4b5dd746bac0cd36b595002, type: 2}
   speed_sprite: {fileID: 21300000, guid: f63fd644dabca2e4aa9b307fe6e89d26, type: 3}
-  slow_sprite: {fileID: 21300000, guid: 6c394bf21c174b040b300b12027b9248, type: 3}
+  slow_sprite: {fileID: 21300000, guid: abfc5fdf0148a3b4f9511f2320a8365f, type: 3}
+  gas_sprite: {fileID: 21300000, guid: 6c394bf21c174b040b300b12027b9248, type: 3}
   driller_sprite: {fileID: 21300000, guid: 49f9e1691e041f74eac09cf002515bfd, type: 3}
   homing_sprite: {fileID: 21300000, guid: 643ea5532e418f447b845d6e83c6907b, type: 3}
   default_sprite: {fileID: 21300000, guid: a513f0afe4a5b5a4e9ae02691a378700, type: 3}
