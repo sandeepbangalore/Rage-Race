@@ -15,7 +15,8 @@ using UnityEngine;
 public class CharacterDetails : MonoBehaviour {
 
 	public string name = null;
-	public float speed;
+    public string bio = null;
+    public float speed;
 	public float attack;
 	public float defense;
 

@@ -21,7 +21,8 @@ public class PlayerManager : MonoBehaviour {
 	//public GameObject[] charactersPrefab;
 	public GameObject[] characters;
 	public Text characterName = null;
-	public Slider characterSpeed = null;
+    public Text characterBio = null;
+    public Slider characterSpeed = null;
 	public Slider characterDefense = null;
 	public Slider characterAttack = null;
 	public Animator sliderAnimation = null;
@@ -68,7 +69,9 @@ public class PlayerManager : MonoBehaviour {
 		current = characters [playerNumber].GetComponent<CharacterDetails>();
 		if (characterName != null) 
 			characterName.text = current.name;
-		if (characterSpeed != null)
+        if (characterBio != null)
+            characterBio.text = current.bio;
+        if (characterSpeed != null)
 			characterSpeed.value = current.speed;
 		if (characterAttack != null)
 			characterAttack.value = current.attack;
@@ -109,7 +112,9 @@ public class PlayerManager : MonoBehaviour {
 			characters [playerNumber].SetActive (true);
 			if (characterName != null) 
 				characterName.text = current.name;
-			if (characterSpeed != null)
+            if (characterBio != null)
+                characterBio.text = current.bio;
+            if (characterSpeed != null)
 				characterSpeed.value = current.speed;
 			if (characterAttack != null)
 				characterAttack.value = current.attack;
