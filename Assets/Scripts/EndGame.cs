@@ -23,7 +23,7 @@ public class EndGame : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		//Debug.Log("Entered");
-		if (other.tag == "Player") {
+		if (other.tag == "Player" && MyGameManager.getGameState() == GameManager.States.Race) {
 		// Get lap number from game manager
 			Debug.Log("Entered");
 			Finish.enabled = true; 
