@@ -20,10 +20,10 @@ public class BallCollision : MonoBehaviour {
 		if(theCollision.gameObject.tag == "Player" || theCollision.gameObject.tag == "NPC")
 		{
 			if (theCollision.gameObject.tag == "Player") {
-				theCollision.gameObject.GetComponent<ThirdPersonCharacter> ().Stunned ();
+				theCollision.gameObject.GetComponent<PlayerPowerupScript> ().slowDown = true;
 			}
 			if (theCollision.gameObject.tag == "NPC") {
-				theCollision.gameObject.GetComponent<AIController> ().Stunned ();
+				theCollision.gameObject.GetComponent<PlayerPowerupScript> ().slowDown = true;
 			}
 			Destroy (gameObject, 0.5f);
 		}

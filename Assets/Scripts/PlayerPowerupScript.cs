@@ -35,7 +35,7 @@ public class PlayerPowerupScript : MonoBehaviour {
     private bool[] shouldUseAIpowerups = null;
 
     private bool speedUp = false;
-	private bool slowDown = false;
+	public bool slowDown = false;
 	public bool hasSlowDown = false;
 	public bool hasDriller = false;
 	public bool hasHoming = false;
