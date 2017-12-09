@@ -20,29 +20,35 @@ public class MenuScript : MonoBehaviour {
 	public Canvas quitMenu;
 	public Canvas startMenu;
 	public Canvas creditsMenu;
-	public Button playText;
+    public Canvas helpMenu;
+    public Button playText;
 	public Button creditsText;
 	public Button exitText;
-	private bool activated = true;
+    public Button helpText;
+    private bool activated = true;
 	public Image screenCredits = null;
 	public Animator rageRaceCredits = null;
 	public Animator scrollCredits = null;
 	public GameObject creditsDummy = null;
 	public GameObject menuDummy = null;
 	public GameObject quitDummy = null;
-	private bool escPressed = false;
+    public GameObject helpDummy = null;
+    private bool escPressed = false;
 	private bool inCredits = false;
 	// Use this for initialization
 	void Start () {
 		quitMenu = quitMenu.GetComponent<Canvas> ();
 		startMenu = startMenu.GetComponent<Canvas> ();
 		creditsMenu = creditsMenu.GetComponent<Canvas> ();
-		playText = playText.GetComponent<Button> ();
+        helpMenu = helpMenu.GetComponent<Canvas>();
+        playText = playText.GetComponent<Button> ();
 		creditsText = creditsText.GetComponent<Button> ();
 		exitText = exitText.GetComponent<Button> ();
-		quitMenu.enabled = false;
+        helpText = helpText.GetComponent<Button>();
+        quitMenu.enabled = false;
 		creditsMenu.enabled = false;
-	}
+        helpMenu.enabled = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -73,15 +79,33 @@ public class MenuScript : MonoBehaviour {
 		quitMenu.enabled = true;
 		creditsMenu.enabled = false;
 		startMenu.enabled = false;
-		playText.enabled = false;
+        helpMenu.enabled = false;
+        playText.enabled = false;
 		creditsText.enabled = false;
 		exitText.enabled = false;
-		RageRaceTitle.enabled = false;
+        helpText.enabled = false;
+        RageRaceTitle.enabled = false;
 		escPressed = true;
 
 	}
 
-	public void CreditPress()
+    public void HelpPress()
+    {
+        Debug.Log("Exit Pressed!");
+        quitMenu.enabled = false;
+        creditsMenu.enabled = false;
+        startMenu.enabled = false;
+        helpMenu.enabled = true;
+        playText.enabled = false;
+        creditsText.enabled = false;
+        exitText.enabled = false;
+        helpText.enabled = false;
+        RageRaceTitle.enabled = false;
+        escPressed = true;
+
+    }
+
+    public void CreditPress()
 	{
 		Debug.Log("Credits Pressed!");
 		EventSystem.current.SetSelectedGameObject (creditsDummy);
@@ -95,11 +119,13 @@ public class MenuScript : MonoBehaviour {
 		Debug.Log("OK Pressed!");
 		quitMenu.enabled = false;
 		creditsMenu.enabled = false;
-		startMenu.enabled = true;
+        helpMenu.enabled = false;
+        startMenu.enabled = true;
 		playText.enabled = true;
 		creditsText.enabled = true;
 		exitText.enabled = true;
-		RageRaceTitle.enabled = true;
+        helpText.enabled = true;
+        RageRaceTitle.enabled = true;
 		EventSystem.current.SetSelectedGameObject (menuDummy);
 		StartCoroutine (ScreenFadeOut ());
 		inCredits = false;
@@ -112,10 +138,12 @@ public class MenuScript : MonoBehaviour {
 		if (!inCredits) {
 			creditsMenu.enabled = false;
 			quitMenu.enabled = false;
-			startMenu.enabled = true;
+            helpMenu.enabled = false;
+            startMenu.enabled = true;
 			playText.enabled = true;
 			creditsText.enabled = true;
-			exitText.enabled = true;
+            helpText.enabled = true;
+            exitText.enabled = true;
 			RageRaceTitle.enabled = true;
 			EventSystem.current.SetSelectedGameObject (menuDummy);
 		} else {
@@ -172,7 +200,9 @@ public class MenuScript : MonoBehaviour {
 			scrollCredits.SetBool ("CreditsStarted", true);
 			quitMenu.enabled = false;
 			startMenu.enabled = false;
-			playText.enabled = false;
+            helpMenu.enabled = false;
+            helpText.enabled = false;
+            playText.enabled = false;
 			creditsText.enabled = false;
 			exitText.enabled = false;
 			activated = true;
