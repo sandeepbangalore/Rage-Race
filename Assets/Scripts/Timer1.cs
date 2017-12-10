@@ -6,17 +6,13 @@ using UnityEngine.UI;
 public class Timer1 : MonoBehaviour {
 
     public Text timerText;
-    private float startTime;
     private bool finished = false;
     private bool start = false;
     private float ti;
     // Use this for initialization
     void Start () {
         
-
-        startTime = Time.time;
         timerText = GameObject.FindGameObjectWithTag("Timer").GetComponent<Text>();
-        //ti = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -28,7 +24,6 @@ public class Timer1 : MonoBehaviour {
             float t = Time.time - ti;
             string minutes = ((int)t / 60).ToString();
             string seconds = (t % 60).ToString("f2");
-
             timerText.text = minutes + ":" + seconds;
         }
         

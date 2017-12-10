@@ -17,6 +17,7 @@ public class PositionManager : MonoBehaviour {
     private PositionManager[] runners;
     private bool isPlayer = false;
     private PositionManager playerPositionManager = null;
+    public string time;
 
 
     // Use this for initialization
@@ -31,10 +32,15 @@ public class PositionManager : MonoBehaviour {
         }
 
         // get all runners/competitors
+        
         runners = FindObjectsOfType<PositionManager>();
 		positions ();
 	}
 
+    public string GetTime()
+    {
+        return this.GetComponent<Timer1>().timerText.text;
+    }
     // sometimes AI may get knocked backwards on collision
     // if this happens, make sure nextwaypoint and current waypoint position are correct
     private void OnCollisionEnter(Collision collision)

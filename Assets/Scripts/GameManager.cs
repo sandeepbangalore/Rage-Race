@@ -176,7 +176,9 @@ public class GameManager : MonoBehaviour {
 			foreach (PositionManager runner in results) {
 				int place = System.Array.IndexOf (results, runner) + 1;
 				string Name = runner.gameObject.name.Substring(0,runner.gameObject.name.Length-7);
-				switch (place) {
+                string time = runner.GetTime();
+
+                switch (place) {
 				case 1: 
 					if (runner.gameObject.tag != "Player")
 						resultsText += "1ST - " + Name+"\n";
