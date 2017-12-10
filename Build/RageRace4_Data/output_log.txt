@@ -1,28 +1,3881 @@
 Initialize engine version: 2017.1.0f3 (472613c02cf7)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GT 740M          (ID=0x1292)
-    Vendor:   NVIDIA
-    VRAM:     1972 MB
-    Driver:   9.18.13.4752
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon HD 8690M (ID=0x6660)
+    Vendor:   ATI
+    VRAM:     2036 MB
+    Driver:   15.200.1045.0
 Begin MonoManager ReloadAssembly
-Platform assembly: G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
-Loading G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
-Platform assembly: G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\EasyRoads3Dv3.dll (this message is harmless)
-Loading G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\EasyRoads3Dv3.dll into Unity Child Domain
-Platform assembly: G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\System.dll (this message is harmless)
-Platform assembly: G:\Unity\Rage Race\Track\Build\RageRace4_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.078 seconds
+Platform assembly: C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\EasyRoads3Dv3.dll (this message is harmless)
+Loading C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\EasyRoads3Dv3.dll into Unity Child Domain
+Platform assembly: C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Tina\Documents\2017 Fall\CS 4455 Game\Rage-Race\Build\RageRace4_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.027 seconds
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 9.710109 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: d54 -> priority: 1 
+  Thread -> id: 2094 -> priority: 1 
+The referenced script on this Behaviour (Game Object 'T-Crossing') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'cul-de-sac') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'rounded_crossing') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Headlights Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.083638 ms
+
+Unloading 181 unused Assets to reduce memory usage. Loaded Objects now: 54790.
+Total: 20.388767 ms (FindLiveObjects: 3.031886 ms CreateObjectMapping: 0.850515 ms MarkObjects: 7.723748 ms  DeleteObjects: 8.782274 ms)
+
+Help Pressed!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Power Pressed!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Help Pressed!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Power Pressed!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Help Pressed!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+OK Pressed!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 74.319869 ms
+
+Unloading 372 unused Assets to reduce memory usage. Loaded Objects now: 2810.
+Total: 5.665199 ms (FindLiveObjects: 0.185430 ms CreateObjectMapping: 0.076293 ms MarkObjects: 0.553211 ms  DeleteObjects: 4.849923 ms)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Done1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Done
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.468068 ms
+
+Unloading 125 unused Assets to reduce memory usage. Loaded Objects now: 1602.
+Total: 3.731525 ms (FindLiveObjects: 0.354096 ms CreateObjectMapping: 0.298672 ms MarkObjects: 1.482072 ms  DeleteObjects: 1.594973 ms)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Headlights Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'T-Crossing') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'cul-de-sac') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'rounded_crossing') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Headlights Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.584367 ms
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+
+Unloading 334 unused Assets to reduce memory usage. Loaded Objects now: 76805.
+Total: 38.459998 ms (FindLiveObjects: 4.492405 ms CreateObjectMapping: 1.594973 ms MarkObjects: 19.665178 ms  DeleteObjects: 12.706757 ms)
+
+camera init
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Done
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Slots not available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Slots not available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Slots not available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Slots not available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Slots not available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+FIRE FIRE FIRE!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerPearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 29
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 30
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 31
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 32
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 33
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 34
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Entered
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 35
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 36
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+FIRE FIRE FIRE!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 29
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 30
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 31
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 32
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+jasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 33
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Headlights Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 106.394843 ms
+
+Unloading 390 unused Assets to reduce memory usage. Loaded Objects now: 57312.
+Total: 37.252307 ms (FindLiveObjects: 3.562859 ms CreateObjectMapping: 0.974705 ms MarkObjects: 8.673137 ms  DeleteObjects: 24.040578 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 71.849406 ms
+Releasing render texture that is set as Camera.targetTexture!
+ 
+(Filename:  Line: 3741)
+
+Releasing render texture that is set as Camera.targetTexture!
+ 
+(Filename:  Line: 3741)
+
+
+Unloading 2753 unused Assets to reduce memory usage. Loaded Objects now: 2832.
+Total: 14.827230 ms (FindLiveObjects: 0.278145 ms CreateObjectMapping: 0.410888 ms MarkObjects: 0.664743 ms  DeleteObjects: 13.473452 ms)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Done1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Done
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Done1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Done
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.571024 ms
+
+Unloading 125 unused Assets to reduce memory usage. Loaded Objects now: 1621.
+Total: 4.358977 ms (FindLiveObjects: 0.392756 ms CreateObjectMapping: 0.247354 ms MarkObjects: 1.175189 ms  DeleteObjects: 2.534098 ms)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Headlights Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'RCCCanvas 2 (1)') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'T-Crossing') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'cul-de-sac') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'rounded_crossing') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Headlights Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Left Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Right Indicator Button') is missing!
+ 
+(Filename:  Line: 1758)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.273401 ms
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+layer numbers must be between 0 and 31
+ 
+(Filename:  Line: 1371)
+
+
+Unloading 334 unused Assets to reduce memory usage. Loaded Objects now: 76816.
+Total: 50.056227 ms (FindLiveObjects: 4.791762 ms CreateObjectMapping: 1.036629 ms MarkObjects: 26.919193 ms  DeleteObjects: 17.307615 ms)
+
+camera init
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Done
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Slots not available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+FIRE FIRE FIRE!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+FIRE FIRE FIRE!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+FIRE FIRE FIRE!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+FIRE FIRE FIRE!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Slots not available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 29
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+FIRE FIRE FIRE!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 30
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 31
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 32
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 33
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 34
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 35
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Slots not available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 36
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Slots not available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Speedup
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+FIRE FIRE FIRE!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+FIRE FIRE FIRE!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 37
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints37
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints35
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone) repairing waypoints35
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone) repairing waypoints37
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 36
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 38
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 29
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 30
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 31
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints31
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints31
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints31
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 32
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 33
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 34
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Entered
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 35
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone): 36
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+claire(Clone): 39
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerJasper(Clone): 37
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Hail Mary!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone) repairing waypoints26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+pearl(Clone): 27
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ty(Clone) repairing waypoints35
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Releasing render texture that is set as Camera.targetTexture!
+ 
+(Filename:  Line: 3741)
+
+Releasing render texture that is set as Camera.targetTexture!
+ 
+(Filename:  Line: 3741)
+
