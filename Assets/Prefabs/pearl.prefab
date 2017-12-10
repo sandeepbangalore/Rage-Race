@@ -2580,6 +2580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Pearl
+  bio: 
   speed: 0
   attack: 0
   defense: 0
@@ -2596,17 +2597,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTime: 1
   maxBoostTime: 0.5
+  slowDown: 0
   hasSlowDown: 0
   hasDriller: 0
   hasHoming: 0
+  hasGasPickup: 0
   powerupSlots: []
   slotsAvailable: 1
   slowdownblock: {fileID: 4903692734540580, guid: 11cd5d55bc030754c9e5e5d8b0552d93,
     type: 2}
   Driller: {fileID: 1755938521150968, guid: eb58b7cb24c70fc42a1e677b6200f7db, type: 2}
   Homing: {fileID: 1727290189784546, guid: eebf4c3011c43c9479deff328e6f49ce, type: 2}
+  GasCloud: {fileID: 1990311486323228, guid: 11cd5d55bc030754c9e5e5d8b0552d93, type: 2}
   speed_sprite: {fileID: 0}
   slow_sprite: {fileID: 0}
+  gas_sprite: {fileID: 0}
   driller_sprite: {fileID: 0}
   homing_sprite: {fileID: 0}
   default_sprite: {fileID: 0}

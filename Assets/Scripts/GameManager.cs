@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using System.Linq;
 
 public class GameManager : MonoBehaviour {
-	
+	public Animator homingAC = null;
 	public enum TrackMode {Day, Night};
 	public TrackMode mode = TrackMode.Day; 
 	public GameObject DayMode = null;
@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour {
 	private bool printed = false;
     private GameObject mainPlayer = null; //BV
     private string playerSelectedName = null;  //BV
+	private bool homingBool = false;
 	private static GameManager _Instance = null;
 	public static GameManager Instance{
 		get{ 
@@ -138,6 +139,12 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (homingBool && gameCurrentPositions [0].gameObject.tag == "Player") {
+			homingAC.SetBool ("blink", true);
+		}
+		else
+			homingAC.SetBool ("blink", false);
+		
 		if (gameState == States.Finish) {
 			printResults ();
 		}
@@ -224,5 +231,13 @@ public class GameManager : MonoBehaviour {
 			return PM.GetComponent<SceneManagerLocal> ().getTrack ();
 		else
 			return "";
+	}
+
+	public void HomingOn(GameObject homing, bool hasHoming) {
+		homingBool = hasHoming;
+	}
+
+	public void HomingOff(){
+		homingBool = false;
 	}
 }

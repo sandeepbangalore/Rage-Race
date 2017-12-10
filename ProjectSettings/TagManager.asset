@@ -18,6 +18,8 @@ TagManager:
   - HomingPickup
   - GasPickup
   - GasCloudTag
+  - Road
+  - OffRoad
   layers:
   - Default
   - TransparentFX

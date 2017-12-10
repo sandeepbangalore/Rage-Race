@@ -17,7 +17,7 @@ public class BallCollision : MonoBehaviour {
 
 	void OnCollisionEnter (Collision theCollision)
 	{
-		if(theCollision.gameObject.tag == "Player" || theCollision.gameObject.tag == "NPC")
+		if(theCollision.gameObject.tag == "Player" || theCollision.gameObject.tag == "NPC" || theCollision.gameObject.tag == "Road" )
 		{
 			if (theCollision.gameObject.tag == "Player") {
 				theCollision.gameObject.GetComponent<PlayerPowerupScript> ().slowDown = true;

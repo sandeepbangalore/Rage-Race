@@ -63,9 +63,11 @@ public class homingC : MonoBehaviour {
 			Destroy(gameObject);
 			if (theCollision.gameObject.tag == "Player") {
 				theCollision.gameObject.GetComponent<ThirdPersonCharacter> ().Stunned ();
+				MyGameManager.HomingOff ();
 			}
 			if (theCollision.gameObject.tag == "NPC") {
 				theCollision.gameObject.GetComponent<AIController> ().Stunned ();
+				MyGameManager.HomingOff ();
 			}
 		}
 	}

@@ -221,4 +221,16 @@ public class AIController : MonoBehaviour
     {
 		anim.SetTrigger ("Stun");
 	}
+
+//	void OnCollisionEnter(Collision collision) {
+//		if (collision.transform.gameObject.tag == "OffRoad")
+//		{
+//			Debug.Log("Respawn");
+//			gameObject.transform.position = GameObject.Find("RespawnPoint").transform.position;
+//			if (AIscript != null)
+//			{
+//				positionManager.diedOnRamp();
+//			}
+//		}
+//	}
 }

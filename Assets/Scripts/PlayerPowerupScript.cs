@@ -58,6 +58,13 @@ public class PlayerPowerupScript : MonoBehaviour {
 	public Image image1;
 	public Image image2;
 
+	private GameManager MyGameManager = null;
+
+
+	void Awake() {
+		MyGameManager = GameManager.Instance;
+	}
+
 	// Use this for initialization
 	void Start () {
 		powerupSlots = new string[2];
@@ -128,7 +135,8 @@ public class PlayerPowerupScript : MonoBehaviour {
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
 				Vector3 spawnPoint = pos + dir * 2f + gameObject.transform.up * 5f;
-				Instantiate (Homing, spawnPoint, rot);
+				GameObject tempHoming = Instantiate (Homing, spawnPoint, rot);
+				MyGameManager.HomingOn (tempHoming, true);
 				if (powerupSlots[1] != "HomingPickup")
 					hasHoming = false;
 				powerupSlots [0] = "";
@@ -182,7 +190,8 @@ public class PlayerPowerupScript : MonoBehaviour {
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(new Vector3(0f,90f,0f)));
 				Vector3 spawnPoint = pos + dir * 2f + gameObject.transform.up * 5f;
-				Instantiate (Homing, spawnPoint, rot);
+				GameObject tempHoming = Instantiate (Homing, spawnPoint, rot);
+				MyGameManager.HomingOn (tempHoming, true);
 				if (powerupSlots[0] != "HomingPickup")
 					hasHoming = false;
 				powerupSlots [1] = "";

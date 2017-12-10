@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1428632409525428}
+  m_RootGameObject: {fileID: 1491784816992536}
   m_IsPrefabParent: 1
---- !u!1 &1428632409525428
+--- !u!1 &1491784816992536
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4445612168796544}
-  - component: {fileID: 114581029198611856}
+  - component: {fileID: 4971696571617214}
+  - component: {fileID: 114158081537097666}
   m_Layer: 0
   m_Name: ERSideObjectsLog
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4445612168796544
+--- !u!4 &4971696571617214
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1428632409525428}
+  m_GameObject: {fileID: 1491784816992536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 179.999, y: 179.999, z: 179.999}
---- !u!114 &114581029198611856
+--- !u!114 &114158081537097666
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1428632409525428}
+  m_GameObject: {fileID: 1491784816992536}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 353395545, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
@@ -793,7 +793,7 @@ MonoBehaviour:
   - version: 2.0.0
     name: Concrete Barrier Simple Left
     id: 1422205435.6632535
-    timestamp: 1427359113.9844108
+    timestamp: 1512862046.8314583
     objectType: 2
     gameobjectGUID: 
     textureGUID: 
@@ -832,7 +832,7 @@ MonoBehaviour:
     childOrderActive: 0
     childOrder: 0
     meshBoundsAlignment: 0
-    xPosition: -1
+    xPosition: 0
     relativeTo: 1
     yPosition: 0
     yRotation: 0
@@ -849,8 +849,8 @@ MonoBehaviour:
     connectionObject: {fileID: 0}
     material: {fileID: 0}
     meshObjects: []
-    boxSize: {x: 0, y: 0}
-    boxOffset: {x: 0, y: 0}
+    boxSize: {x: 0.423245, y: 1.0286549}
+    boxOffset: {x: 0, y: 0.51432747}
     includeStartSegment: 1
     startSegmentOffset: 0
     includeStartEdgeTris: 0
@@ -883,7 +883,7 @@ MonoBehaviour:
   - version: 2.0.0
     name: Concrete Barrier Simple Right
     id: 1422205525.016364
-    timestamp: 1427359125.1500497
+    timestamp: 1512862086.9678695
     objectType: 2
     gameobjectGUID: 
     textureGUID: 
@@ -922,7 +922,7 @@ MonoBehaviour:
     childOrderActive: 0
     childOrder: 0
     meshBoundsAlignment: 0
-    xPosition: 1
+    xPosition: 0
     relativeTo: 2
     yPosition: 0
     yRotation: 0
@@ -939,8 +939,8 @@ MonoBehaviour:
     connectionObject: {fileID: 0}
     material: {fileID: 0}
     meshObjects: []
-    boxSize: {x: 0, y: 0}
-    boxOffset: {x: 0, y: 0}
+    boxSize: {x: 0.423245, y: 1.0286549}
+    boxOffset: {x: 0, y: 0.51432747}
     includeStartSegment: 1
     startSegmentOffset: 0
     includeStartEdgeTris: 0
