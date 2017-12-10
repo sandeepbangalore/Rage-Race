@@ -26,6 +26,7 @@ public class AIController : MonoBehaviour
 
     private PositionManager positionManager;
     private Vector3 nextWaypoint;
+    private Vector3 lastWaypoint;
     private bool isPathingToPowerup = false;
 
     //public State state = State.SetNewGoal; // currently unused
@@ -61,24 +62,6 @@ public class AIController : MonoBehaviour
         return MyGameManager.getGameState() == GameManager.States.Finish;
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.impulse.magnitude > 15)
-    //    {
-    //        //debugPrint("collision impulse magnitude = " + collision.impulse.magnitude);
-    //        agent.enabled = false;
-    //        Invoke("reenableNavmeshAgent", 0.2f);
-    //    }
-    //}
-
-    //void reenableNavmeshAgent()
-    //{
-    //    agent.enabled = true;
-    //    aiSteer.clearWaypoints();
-    //    aiSteer.setWaypoint(nextWaypoint);
-    //}
-
-
     // Use this for initialization
     void Start()
     {
@@ -100,14 +83,13 @@ public class AIController : MonoBehaviour
         positionManager.setWaypoints(true); // use random waypoints
 
         // prepare navigation
-        //nextWaypoint = positionManager.getNextWaypoint();
         nextWaypoint = transform.position;
+        lastWaypoint = nextWaypoint;
         aiSteer.setWaypoint(nextWaypoint);
-        //agent.isStopped = true;
         aiSteer.useNavMeshPathPlanning = true;
 
         // set up to check if agent gets stuck
-        beginWaitTime = Time.timeSinceLevelLoad;
+        beginWaitTime = -1;
         lastLocation = transform.position;
 
     }
@@ -125,8 +107,9 @@ public class AIController : MonoBehaviour
     void updateNextWaypoint()
     {
         Vector3 potentialNextWaypoint = positionManager.getNextWaypoint();
-        if (potentialNextWaypoint != nextWaypoint)
+        if (potentialNextWaypoint != nextWaypoint || positionManager.forceResetNav)
         {
+            lastWaypoint = nextWaypoint;
             nextWaypoint = potentialNextWaypoint;
             aiSteer.clearWaypoints();
             aiSteer.setWaypoint(nextWaypoint);
@@ -157,6 +140,11 @@ public class AIController : MonoBehaviour
                 agent.Warp(nextWaypoint);
                 powerup.AICatchUpCheat();
             }
+            //else if (positionManager.isBehindPlayer(false, -1))
+            //{
+            //    agent.Warp(lastWaypoint);
+            //    positionManager.repairWaypoints();
+            //}
 
         }
         lastLocation = transform.position;
@@ -169,9 +157,19 @@ public class AIController : MonoBehaviour
 
     void updateShouldUsePowerups()
     {
+        updateShouldUseCheat();
         updateShouldUseSlow();
         updateShouldUseDriller(10f);
         updateShouldUseHoming();
+    }
+
+    // AI should cheat and boost if they are at least 3 waypoints behind the player
+    void updateShouldUseCheat()
+    {
+        if (positionManager.isBehindPlayer(false, 3))
+        {
+            powerup.AICatchUpCheat();
+        }
     }
 
     // AI should use the slow powerup if it is in front of the player
@@ -199,6 +197,11 @@ public class AIController : MonoBehaviour
         {
             updateNextWaypoint();
             updateShouldUsePowerups();
+
+            if (beginWaitTime == -1)
+            {
+                beginWaitTime = Time.timeSinceLevelLoad;
+            }
 
             if (Time.timeSinceLevelLoad - beginWaitTime > waitTime)
             {
@@ -229,7 +232,7 @@ public class AIController : MonoBehaviour
 //			gameObject.transform.position = GameObject.Find("RespawnPoint").transform.position;
 //			if (AIscript != null)
 //			{
-//				positionManager.diedOnRamp();
+//				positionManager.repairWaypoints();
 //			}
 //		}
 //	}

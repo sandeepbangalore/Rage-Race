@@ -3037,6 +3037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionText: {fileID: 0}
+  time: 
+  forceResetNav: 0
   leftWaypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -3173,7 +3175,7 @@ MonoBehaviour:
   m_JumpPower: 6
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 2.75
+  m_MoveSpeedMultiplier: 2.55
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
   speedPowerUp: 1

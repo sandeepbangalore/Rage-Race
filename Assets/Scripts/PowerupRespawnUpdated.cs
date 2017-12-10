@@ -39,7 +39,7 @@ public class PowerupRespawnUpdated : MonoBehaviour
 				GameObject temp = Instantiate (pickup[getIndex()], spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation) as GameObject;
 			}
 			else{
-				Debug.Log (hitCollider [0]);
+				//Debug.Log (hitCollider [0]);
 			}
 		}
 	}

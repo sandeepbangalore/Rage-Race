@@ -6,23 +6,25 @@ using UnityEngine.UI;
 public class PositionManager : MonoBehaviour {
 
     public Text positionText;
+    public string time;
 
+    public bool forceResetNav = false;
     public Transform[] leftWaypoints;
     public Transform[] rightWaypoints;
     private Vector3[] waypoints;
+    private Vector3[] closestWaypoints;
     private int lapProgress = 1; // TODO: implement lap progress
     private int waypointProgress = 0;
     private Vector3 nextWaypoint;
-	private GameManager MyGameManager = null;
+    private GameManager MyGameManager = null;
     private PositionManager[] runners;
     private bool isPlayer = false;
     private PositionManager playerPositionManager = null;
-    public string time;
 
 
     // Use this for initialization
-    void Start () {
-		MyGameManager = GameManager.Instance;
+    void Start() {
+        MyGameManager = GameManager.Instance;
 
         // set midpoint waypoints if this script is attached to the player
         if (this.tag == "Player")
@@ -32,27 +34,57 @@ public class PositionManager : MonoBehaviour {
         }
 
         // get all runners/competitors
-        
+
         runners = FindObjectsOfType<PositionManager>();
-		positions ();
-	}
+        positions();
+    }
 
     public string GetTime()
     {
         return this.GetComponent<Timer1>().timerText.text;
     }
+
+    // Call this function whenever the gameobject with this script gets displaced outside of their
+    // control. usually occurs during collisions or respawns
+    public void repairWaypoints()
+    {
+        var stackTrace = new System.Diagnostics.StackTrace();
+        // sort waypoints by closest distance to this gameobject
+        System.Array.Sort(closestWaypoints,
+            (a, b) => ((transform.position - a).magnitude).CompareTo((transform.position - b).magnitude));
+
+        // of the two closest waypoints, nextwaypoint should be the one further along the track 
+        // (if it isn't already)
+        int index = Mathf.Max(System.Array.IndexOf(waypoints, closestWaypoints[0]),
+            System.Array.IndexOf(waypoints, closestWaypoints[1]));
+        if (waypointProgress != index - 1)
+        {
+            if (index == waypoints.Length - 1)
+            {
+                index = 0;
+            }
+            print(gameObject.name + " repairing waypoints" + index);
+            //print((index-1).ToString() + closestWaypoints[0] + closestWaypoints[1]);
+            waypointProgress = index - 1;
+            nextWaypoint = waypoints[++waypointProgress];
+            forceResetNav = true;
+        }
+    }
+
     // sometimes AI may get knocked backwards on collision
     // if this happens, make sure nextwaypoint and current waypoint position are correct
     private void OnCollisionEnter(Collision collision)
     {
-        
+        //if (collision.gameObject.tag == "grabbable" || collision.gameObject.tag == "Missile")
+        //{
+        //    repairWaypoints();
+        //}
     }
 
-    // resets the waypoint progress/nextwaypoint after dying on the ramp
-    // (assumes has to backtrack 2 waypoints)
+    // repair waypoints after AI dies on ramp
     public void diedOnRamp()
     {
-        waypointProgress -= 2;
+        repairWaypoints();
     }
 
     // creates waypoints for the whole track
@@ -67,6 +99,7 @@ public class PositionManager : MonoBehaviour {
         // for all the left & right waypoints of the track, interpolate a position between them
         // and append the waypoint to private list of waypoints
         waypoints = new Vector3[leftWaypoints.Length];
+        closestWaypoints = new Vector3[waypoints.Length];
         for (int i = 0; i < leftWaypoints.Length; i++)
         {
             float n = 0.5f; // if not random, default to to interpolating to the midpt of the two waypts
@@ -80,6 +113,8 @@ public class PositionManager : MonoBehaviour {
             waypoints[i] = waypt;
             nextWaypoint = i == 0 ? waypt : nextWaypoint; // default nextWaypoint to the first one
         }
+
+        System.Array.Copy(waypoints, closestWaypoints, waypoints.Length);
     }
 
     // gets the race position of this gameobject (starting at 1)
@@ -136,6 +171,7 @@ public class PositionManager : MonoBehaviour {
         if (hasReachedTarget(nextWaypoint, 10f))
         {
             nextWaypoint = waypoints[++waypointProgress];
+            print(gameObject.name + ": " + waypointProgress);
         }
     }
 

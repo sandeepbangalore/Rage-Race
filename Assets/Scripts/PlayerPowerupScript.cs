@@ -41,6 +41,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 	public bool hasHoming = false;
 	public bool hasGasPickup = false;
     private bool boost = false;
+    private GameObject[] respawnPoints;
 	public string[] powerupSlots;
 	public bool slotsAvailable = true;
     public Transform slowdownblock;
@@ -81,6 +82,9 @@ public class PlayerPowerupScript : MonoBehaviour {
         // bools match this order of powerups: slow, driller, homing
         // should remain false if this script is attached to the player
         shouldUseAIpowerups = new bool[] { false, false, false };
+
+        // get all locations of respawn locations for the ramp
+        respawnPoints = GameObject.FindGameObjectsWithTag("Respawn");
 	}
 
     // Update is called once per frame
@@ -432,7 +436,10 @@ public class PlayerPowerupScript : MonoBehaviour {
         if (other.transform.gameObject.tag == "DeathTrigger")
         {
             Debug.Log("FIRE FIRE FIRE!");
-            gameObject.transform.position = GameObject.Find("RespawnPoint").transform.position;
+            //gameObject.transform.position = GameObject.Find("RespawnPoint").transform.position;
+            // respawn at closest respawn point
+            System.Array.Sort(respawnPoints, (a, b) => ((transform.position - a.transform.position).magnitude).CompareTo((transform.position - b.transform.position).magnitude));
+            gameObject.transform.position = respawnPoints[0].transform.position;
             if (AIscript != null)
             {
                 positionManager.diedOnRamp();

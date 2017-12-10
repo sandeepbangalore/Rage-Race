@@ -37,10 +37,12 @@ public class DrillerMissile : MonoBehaviour {
 			//Destroy (collision.gameObject, 1);
 			if (collision.gameObject.tag == "Player") {
 				collision.gameObject.GetComponent<ThirdPersonCharacter> ().Stunned ();
-			}
+                collision.gameObject.GetComponent<PositionManager>().repairWaypoints();
+            }
 			if (collision.gameObject.tag == "NPC") {
 				collision.gameObject.GetComponent<AIController> ().Stunned ();
-			}
+                collision.gameObject.GetComponent<PositionManager>().repairWaypoints();
+            }
 		}
 		else{
 			SmokePrefab.emissionRate = 0.0f;
@@ -51,10 +53,12 @@ public class DrillerMissile : MonoBehaviour {
 			Destroy(gameObject,0.25f);
 			if (collision.gameObject.tag == "Player") {
 				collision.gameObject.GetComponent<ThirdPersonCharacter> ().Stunned ();
-			}
+                collision.gameObject.GetComponent<PositionManager>().repairWaypoints();
+            }
 			if (collision.gameObject.tag == "NPC") {
 				collision.gameObject.GetComponent<AIController> ().Stunned ();
-			}
+                collision.gameObject.GetComponent<PositionManager>().repairWaypoints();
+            }
 		}
 		//	return;
 	}
