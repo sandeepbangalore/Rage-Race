@@ -13,6 +13,10 @@ public class AudioEventManager : MonoBehaviour
 
     public AudioClip playerStepAudio;
     public AudioClip powerUpAudio;
+    public AudioClip BlockDropAudio;
+    public AudioClip GasAudio;
+    public AudioClip DrillerAudio;
+    public AudioClip HomingAudio;
     // public AudioClip playerLaserStepAudio;
     // public AudioClip playerIceStepAudio;
 
@@ -34,6 +38,10 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> playerStepEventListener;
     private UnityAction<Vector3> powerUpEventListener;
+    private UnityAction<Vector3> BlockDropEventListener;
+    private UnityAction<Vector3> GasEventListener;
+    private UnityAction<Vector3> DrillerEventListener;
+    private UnityAction<Vector3> HomingEventListener;
     // private UnityAction<Vector3> playerLaserStepEventListener;
     // private UnityAction<Vector3> playerIceStepEventListener;
 
@@ -57,6 +65,10 @@ public class AudioEventManager : MonoBehaviour
 
         playerStepEventListener = new UnityAction<Vector3>(playerStepEventHandler);
         powerUpEventListener = new UnityAction<Vector3>(powerUpEventHandler);
+        BlockDropEventListener = new UnityAction<Vector3>(blockDropEventHandler);
+        GasEventListener = new UnityAction<Vector3>(gasEventHandler);
+        DrillerEventListener = new UnityAction<Vector3>(drillerEventHandler);
+        HomingEventListener = new UnityAction<Vector3>(homingEventHandler);
         // playerLaserStepEventListener = new UnityAction<Vector3> (playerLaserStepHandler);
         // playerIceStepEventListener = new UnityAction<Vector3> (playerIceStepHandler);
 
@@ -89,6 +101,10 @@ public class AudioEventManager : MonoBehaviour
 
         EventManager.StartListening<PlayerStepEvent, Vector3>(playerStepEventListener);
         EventManager.StartListening<PowerUpEvent, Vector3>(powerUpEventListener);
+        EventManager.StartListening<GasEvent, Vector3>(GasEventListener);
+        EventManager.StartListening<BlockDropEvent, Vector3>(BlockDropEventListener);
+        EventManager.StartListening<DrillerEvent, Vector3>(DrillerEventListener);
+        EventManager.StartListening<HomingEvent, Vector3>(HomingEventListener);
         // EventManager.StartListening<PlayerLaserStepEvent,Vector3> (playerLaserStepEventListener);
         // EventManager.StartListening<PlayerIceStepEvent,Vector3> (playerIceStepEventListener);
 
@@ -114,6 +130,10 @@ public class AudioEventManager : MonoBehaviour
 
         EventManager.StopListening<PlayerStepEvent, Vector3>(playerStepEventListener);
         EventManager.StopListening<PowerUpEvent, Vector3>(powerUpEventListener);
+        EventManager.StopListening<GasEvent, Vector3>(GasEventListener);
+        EventManager.StopListening<BlockDropEvent, Vector3>(BlockDropEventListener);
+        EventManager.StopListening<DrillerEvent, Vector3>(DrillerEventListener);
+        EventManager.StopListening<HomingEvent, Vector3>(HomingEventListener);
         // EventManager.StopListening<PlayerLaserStepEvent,Vector3> (playerLaserStepEventListener);
         // EventManager.StopListening<PlayerIceStepEvent,Vector3> (playerIceStepEventListener);
 
@@ -153,7 +173,7 @@ public class AudioEventManager : MonoBehaviour
     // }
     void playerStepEventHandler(Vector3 worldPos)
     {
-        
+
         AudioSource.PlayClipAtPoint(this.playerStepAudio, worldPos, 1f);
     }
 
@@ -161,6 +181,30 @@ public class AudioEventManager : MonoBehaviour
     {
 
         AudioSource.PlayClipAtPoint(this.powerUpAudio, worldPos, 1f);
+    }
+
+    void blockDropEventHandler(Vector3 worldPos)
+    {
+
+        AudioSource.PlayClipAtPoint(this.BlockDropAudio, worldPos, 1f);
+    }
+
+    void gasEventHandler(Vector3 worldPos)
+    {
+
+        AudioSource.PlayClipAtPoint(this.GasAudio, worldPos, 1f);
+    }
+
+    void drillerEventHandler(Vector3 worldPos)
+    {
+
+        AudioSource.PlayClipAtPoint(this.DrillerAudio, worldPos, 1f);
+    }
+
+    void homingEventHandler(Vector3 worldPos)
+    {
+
+        AudioSource.PlayClipAtPoint(this.HomingAudio, worldPos, 1f);
     }
 
 

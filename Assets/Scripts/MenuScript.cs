@@ -21,9 +21,12 @@ public class MenuScript : MonoBehaviour {
 	public Canvas startMenu;
 	public Canvas creditsMenu;
     public Canvas helpMenu;
+    public Canvas powerMenu;
     public Button playText;
 	public Button creditsText;
-	public Button exitText;
+    public Button powerText;
+    public Button controlText;
+    public Button exitText;
     public Button helpText;
     private bool activated = true;
 	public Image screenCredits = null;
@@ -33,21 +36,23 @@ public class MenuScript : MonoBehaviour {
 	public GameObject menuDummy = null;
 	public GameObject quitDummy = null;
     public GameObject helpDummy = null;
+    public GameObject powerDummy = null;
     private bool escPressed = false;
 	private bool inCredits = false;
 	// Use this for initialization
 	void Start () {
-		quitMenu = quitMenu.GetComponent<Canvas> ();
+        powerMenu = powerMenu.GetComponent<Canvas>();
+        quitMenu = quitMenu.GetComponent<Canvas> ();
 		startMenu = startMenu.GetComponent<Canvas> ();
 		creditsMenu = creditsMenu.GetComponent<Canvas> ();
         helpMenu = helpMenu.GetComponent<Canvas>();
         playText = playText.GetComponent<Button> ();
 		creditsText = creditsText.GetComponent<Button> ();
 		exitText = exitText.GetComponent<Button> ();
-        helpText = helpText.GetComponent<Button>();
         quitMenu.enabled = false;
 		creditsMenu.enabled = false;
         helpMenu.enabled = false;
+        powerMenu.enabled = false;
     }
 	
 	// Update is called once per frame
@@ -84,6 +89,8 @@ public class MenuScript : MonoBehaviour {
 		creditsText.enabled = false;
 		exitText.enabled = false;
         helpText.enabled = false;
+        powerText.enabled = false;
+        controlText.enabled = false;
         RageRaceTitle.enabled = false;
 		escPressed = true;
 
@@ -91,18 +98,38 @@ public class MenuScript : MonoBehaviour {
 
     public void HelpPress()
     {
-        Debug.Log("Exit Pressed!");
+        Debug.Log("Help Pressed!");
         quitMenu.enabled = false;
         creditsMenu.enabled = false;
         startMenu.enabled = false;
         helpMenu.enabled = true;
+        powerMenu.enabled = false;
         playText.enabled = false;
         creditsText.enabled = false;
         exitText.enabled = false;
         helpText.enabled = false;
+        powerText.enabled = true;
+        controlText.enabled = false;
         RageRaceTitle.enabled = false;
-        escPressed = true;
+        inCredits = false;
+    }
 
+    public void PowerPress()
+    {
+        Debug.Log("Power Pressed!");
+        quitMenu.enabled = false;
+        creditsMenu.enabled = false;
+        startMenu.enabled = false;
+        helpMenu.enabled = false;
+        powerMenu.enabled = true;
+        playText.enabled = false;
+        creditsText.enabled = false;
+        exitText.enabled = false;
+        helpText.enabled = false;
+        powerText.enabled = false;
+        controlText.enabled = true;
+        RageRaceTitle.enabled = false;
+        inCredits = false;
     }
 
     public void CreditPress()
@@ -117,7 +144,8 @@ public class MenuScript : MonoBehaviour {
 	public void OKPress()
 	{
 		Debug.Log("OK Pressed!");
-		quitMenu.enabled = false;
+        powerMenu.enabled = false;
+        quitMenu.enabled = false;
 		creditsMenu.enabled = false;
         helpMenu.enabled = false;
         startMenu.enabled = true;
@@ -125,6 +153,8 @@ public class MenuScript : MonoBehaviour {
 		creditsText.enabled = true;
 		exitText.enabled = true;
         helpText.enabled = true;
+        powerText.enabled = false;
+        controlText.enabled = false;
         RageRaceTitle.enabled = true;
 		EventSystem.current.SetSelectedGameObject (menuDummy);
 		StartCoroutine (ScreenFadeOut ());
@@ -137,11 +167,14 @@ public class MenuScript : MonoBehaviour {
 		Debug.Log("No Pressed!");
 		if (!inCredits) {
 			creditsMenu.enabled = false;
-			quitMenu.enabled = false;
+            powerMenu.enabled = false;
+            quitMenu.enabled = false;
             helpMenu.enabled = false;
             startMenu.enabled = true;
 			playText.enabled = true;
 			creditsText.enabled = true;
+            powerText.enabled = false;
+            controlText.enabled = false;
             helpText.enabled = true;
             exitText.enabled = true;
 			RageRaceTitle.enabled = true;
@@ -196,14 +229,17 @@ public class MenuScript : MonoBehaviour {
 //		}
 		if (!activated) {
 			creditsMenu.enabled = true;
-			rageRaceCredits.SetBool ("CreditsStarted", true);
+            powerMenu.enabled = false;
+            rageRaceCredits.SetBool ("CreditsStarted", true);
 			scrollCredits.SetBool ("CreditsStarted", true);
 			quitMenu.enabled = false;
 			startMenu.enabled = false;
             helpMenu.enabled = false;
             helpText.enabled = false;
             playText.enabled = false;
-			creditsText.enabled = false;
+            powerText.enabled = false;
+            controlText.enabled = false;
+            creditsText.enabled = false;
 			exitText.enabled = false;
 			activated = true;
 		}

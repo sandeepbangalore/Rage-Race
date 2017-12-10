@@ -103,8 +103,9 @@ public class PlayerPowerupScript : MonoBehaviour {
 					hasSlowDown = false;
 				powerupSlots [0] = "";
 				slotsAvailable = true;
-				////Sound effect of dropping block
-			}
+                ////Sound effect of dropping block
+                EventManager.TriggerEvent<BlockDropEvent, Vector3>(transform.position);
+            }
 			if (hasGasPickup && powerupSlots[0] == "GasPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
@@ -115,8 +116,9 @@ public class PlayerPowerupScript : MonoBehaviour {
 					hasGasPickup = false;
 				powerupSlots [0] = "";
 				slotsAvailable = true;
-				////Sound effect of gas cloud
-			}
+                ////Sound effect of gas cloud
+                EventManager.TriggerEvent<GasEvent, Vector3>(transform.position);
+            }
 
 			if (hasDriller && powerupSlots[0] == "DrillerPickup" && (AIscript == null || shouldUseAIpowerups[1])) {
 				Vector3 pos = gameObject.transform.position;
@@ -128,8 +130,9 @@ public class PlayerPowerupScript : MonoBehaviour {
 					hasDriller = false;
 				powerupSlots [0] = "";
 				slotsAvailable = true;
-				////Sound effect of dropping block
-			}
+                ////Sound effect of dropping block
+                EventManager.TriggerEvent<DrillerEvent, Vector3>(transform.position);
+            }
 			if (hasHoming && powerupSlots[0] == "HomingPickup" && (AIscript == null || shouldUseAIpowerups[2])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
@@ -141,8 +144,9 @@ public class PlayerPowerupScript : MonoBehaviour {
 					hasHoming = false;
 				powerupSlots [0] = "";
 				slotsAvailable = true;
-				////Sound effect of dropping block
-			}
+                ////Sound effect of dropping block
+                EventManager.TriggerEvent<HomingEvent, Vector3>(transform.position);
+            }
 			if(moveScript != null)
 				image1.sprite = default_sprite;
 		}
@@ -158,8 +162,9 @@ public class PlayerPowerupScript : MonoBehaviour {
 					hasSlowDown = false;
 				powerupSlots [1] = "";
 				slotsAvailable = true;
-				////Sound effect of dropping block
-			}
+                ////Sound effect of dropping block
+                EventManager.TriggerEvent<BlockDropEvent, Vector3>(transform.position);
+            }
 			if (hasGasPickup && powerupSlots[1] == "GasPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
@@ -170,8 +175,9 @@ public class PlayerPowerupScript : MonoBehaviour {
 					hasSlowDown = false;
 				powerupSlots [1] = "";
 				slotsAvailable = true;
-				////Sound effect of gas cloud
-			}
+                ////Sound effect of gas cloud
+                EventManager.TriggerEvent<GasEvent, Vector3>(transform.position);
+            }
 
 			if (hasDriller && powerupSlots[1] == "DrillerPickup" && (AIscript == null || shouldUseAIpowerups[1])) {
 				Vector3 pos = gameObject.transform.position;
@@ -183,8 +189,9 @@ public class PlayerPowerupScript : MonoBehaviour {
 					hasDriller = false;
 				powerupSlots [1] = "";
 				slotsAvailable = true;
-				////Sound effect of dropping block
-			}
+                ////Sound effect of dropping block
+                EventManager.TriggerEvent<DrillerEvent, Vector3>(transform.position);
+            }
 			if (hasHoming && powerupSlots[1] == "HomingPickup" && (AIscript == null || shouldUseAIpowerups[2])) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
@@ -196,8 +203,9 @@ public class PlayerPowerupScript : MonoBehaviour {
 					hasHoming = false;
 				powerupSlots [1] = "";
 				slotsAvailable = true;
-				////Sound effect of dropping block
-			}
+                ////Sound effect of dropping block
+                EventManager.TriggerEvent<HomingEvent, Vector3>(transform.position);
+            }
 			if(moveScript != null)
 				image2.sprite = default_sprite;
 		}
