@@ -28,6 +28,7 @@ public class EndGame : MonoBehaviour {
 			Debug.Log("Entered");
 			Finish.enabled = true; 
 			Finish.GetComponent<Animator> ().SetTrigger ("Finish");
+            other.SendMessage("Finish");
 			player.finalResults ();
 			StartCoroutine (gameFinish ());
 		}
