@@ -32,10 +32,10 @@ public class EndGame : MonoBehaviour {
 			player.finalResults ();
 			StartCoroutine (gameFinish ());
 		}
-        if(other.tag == "NPC")
-        {
-            other.SendMessage("Finish");
-        }
+//        if(other.tag == "NPC")
+//        {
+//            other.SendMessage("Finish");
+//        }
 	}
 
 
