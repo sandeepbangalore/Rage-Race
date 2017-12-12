@@ -38,7 +38,7 @@ public class EndGame : MonoBehaviour {
 		}
         else if (other.tag == "NPC")
         {
-            other.GetComponent<AIController>().Invoke("stopRunning", 2f);
+            other.GetComponent<AIController>().Invoke("stopRunning", 4f);
             other.GetComponent<PositionManager>().setFinalPlace(++placeCount);
         }
 
