@@ -21,7 +21,7 @@ public class ThirdPersonCamera : MonoBehaviour
 	void Start()
 	{
 
-        Debug.Log("camera init");
+        //Debug.Log("camera init");
 
 		// initialising references
 		//standardPos = GameObject.FindGameObjectWithTag ("Player").transform.Find("camPos").transform;

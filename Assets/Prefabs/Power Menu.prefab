@@ -453,7 +453,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8cc4b2288ef2047aba3a266b0bbbaf62, type: 3}
-    m_FontSize: 31
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -464,18 +464,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Driller Missile
-
-
-    Slowing Log
-
-
-    Slowing Gas
-
-
-    Homing Missile
-
-'
+  m_Text: "Driller Missile launches straight\nin front of you\n\nStunning Log stuns
+    a person \nBehind you\n\nSlowing Gas slows a person \nBehind you\n\nHoming Missile
+    always hits \nfirst place\n"
 --- !u!114 &114136210943809968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -685,7 +676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Thanks
+  m_Text: Done
 --- !u!114 &114343786397599754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -841,7 +832,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 539652b5501db244ea39a7e4d9bb478a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49f9e1691e041f74eac09cf002515bfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1271,7 +1262,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1211019609021630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 81.90033, z: 0}
+  m_LocalPosition: {x: -69.5, y: 83.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224689460956094124}
@@ -1279,7 +1270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 81.90033}
+  m_AnchoredPosition: {x: -69.5, y: 83.8}
   m_SizeDelta: {x: 73.1, y: 34.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224134483097538914
@@ -1312,7 +1303,7 @@ RectTransform:
   m_Children:
   - {fileID: 224269560176845124}
   m_Father: {fileID: 224425464917550814}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1367,7 +1358,7 @@ RectTransform:
   m_Children:
   - {fileID: 224244634249487400}
   m_Father: {fileID: 224425464917550814}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1384,11 +1375,11 @@ RectTransform:
   m_LocalPosition: {x: 17.000061, y: 17.99997, z: 0}
   m_LocalScale: {x: 1.9230753, y: 1.9230753, z: 1.9230753}
   m_Children:
-  - {fileID: 224214070756466682}
   - {fileID: 224689460956094124}
   - {fileID: 224505611932177234}
   - {fileID: 224839091711445124}
   - {fileID: 224411482750916634}
+  - {fileID: 224214070756466682}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1444,7 +1435,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224425464917550814}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1484,7 +1475,7 @@ RectTransform:
   - {fileID: 224434794834204582}
   - {fileID: 224780361082523888}
   m_Father: {fileID: 224425464917550814}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1543,7 +1534,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224425464917550814}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

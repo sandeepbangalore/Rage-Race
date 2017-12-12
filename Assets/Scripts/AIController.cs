@@ -22,12 +22,15 @@ public class AIController : MonoBehaviour
     private bool shouldUseDriller = false;
     private bool shouldUseHoming = false;
 
+    public bool hasDiedInFire = false;
+
     public float moveSpeedMultiplier = 1f;
 
     private PositionManager positionManager;
     private Vector3 nextWaypoint;
     private Vector3 lastWaypoint;
-    private bool isPathingToPowerup = false;
+    private bool shouldStopRunning = false;
+    private bool isPathingToPowerup = false; // currently unused
 
     //public State state = State.SetNewGoal; // currently unused
 
@@ -60,6 +63,19 @@ public class AIController : MonoBehaviour
     bool hasGameEnded()
     {
         return MyGameManager.getGameState() == GameManager.States.Finish;
+    }
+
+    public void diedOnRamp()
+    {
+        if (!hasDiedInFire)
+        {
+            hasDiedInFire = false;
+            positionManager.diedOnRamp();
+        }
+        else
+        {
+            hasDiedInFire = !hasDiedInFire;
+        }
     }
 
     // Use this for initialization
@@ -193,7 +209,7 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasGameStarted())
+        if (hasGameStarted() && !shouldStopRunning)
         {
             updateNextWaypoint();
             updateShouldUsePowerups();
@@ -209,14 +225,14 @@ public class AIController : MonoBehaviour
                 checkStuck();
             }
         }
-        else if (hasGameEnded())
-        {
-            aiSteer.clearWaypoints();
-            nextWaypoint = transform.position;
-            aiSteer.setWaypoint(transform);
-            //agent.isStopped = true;
-            anim.speed = 1f;
-        }
+        //else if (hasGameEnded())
+        //{
+        //    aiSteer.clearWaypoints();
+        //    nextWaypoint = transform.position;
+        //    aiSteer.setWaypoint(transform);
+        //    //agent.isStopped = true;
+        //    anim.speed = 1f;
+        //}
 
     }
 
@@ -224,6 +240,14 @@ public class AIController : MonoBehaviour
     {
 		anim.SetTrigger ("Stun");
 	}
+
+    public void stopRunning()
+    {
+        shouldStopRunning = true;
+        aiSteer.clearWaypoints();
+        agent.isStopped = true;
+        anim.speed = 1f;
+    }
 
 //	void OnCollisionEnter(Collision collision) {
 //		if (collision.transform.gameObject.tag == "OffRoad")

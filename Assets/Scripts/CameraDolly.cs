@@ -105,7 +105,7 @@ public class CameraDolly : MonoBehaviour {
 			transform.position = Vector3.Lerp (startPos, camPos.position, distanceCovered/journeyDistance);
 		}
 		if (current == State.Done) {
-			Debug.Log ("Done");
+			//Debug.Log ("Done");
 			gameObject.SetActive (false);
 			mainCamera.SetActive (true);
 			mainCamera.transform.position = transform.position;

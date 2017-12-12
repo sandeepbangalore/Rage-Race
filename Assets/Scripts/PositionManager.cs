@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,7 @@ public class PositionManager : MonoBehaviour {
     private PositionManager[] runners;
     private bool isPlayer = false;
     private PositionManager playerPositionManager = null;
+    private float finalPlace = Mathf.Infinity;
 
 
     // Use this for initialization
@@ -48,13 +50,16 @@ public class PositionManager : MonoBehaviour {
     // control. usually occurs during collisions or respawns
     public void repairWaypoints()
     {
-        var stackTrace = new System.Diagnostics.StackTrace();
+        //var stackTrace = new System.Diagnostics.StackTrace();
+
         // sort waypoints by closest distance to this gameobject
         System.Array.Sort(closestWaypoints,
             (a, b) => ((transform.position - a).magnitude).CompareTo((transform.position - b).magnitude));
 
         // of the two closest waypoints, nextwaypoint should be the one further along the track 
         // (if it isn't already)
+        //print("repair option 1: " + closestWaypoints[0] + ", index: " + System.Array.IndexOf(waypoints, closestWaypoints[0]));
+        //print("repair option 2: " + closestWaypoints[1] + ", index: " + System.Array.IndexOf(waypoints, closestWaypoints[1]));
         int index = Mathf.Max(System.Array.IndexOf(waypoints, closestWaypoints[0]),
             System.Array.IndexOf(waypoints, closestWaypoints[1]));
         if (waypointProgress != index - 1)
@@ -63,7 +68,7 @@ public class PositionManager : MonoBehaviour {
             {
                 index = 0;
             }
-            print(gameObject.name + " repairing waypoints" + index);
+            //print(gameObject.name + " repairing waypoints" + index);
             //print((index-1).ToString() + closestWaypoints[0] + closestWaypoints[1]);
             waypointProgress = index - 1;
             nextWaypoint = waypoints[++waypointProgress];
@@ -71,20 +76,26 @@ public class PositionManager : MonoBehaviour {
         }
     }
 
-    // sometimes AI may get knocked backwards on collision
-    // if this happens, make sure nextwaypoint and current waypoint position are correct
-    private void OnCollisionEnter(Collision collision)
-    {
-        //if (collision.gameObject.tag == "grabbable" || collision.gameObject.tag == "Missile")
-        //{
-        //    repairWaypoints();
-        //}
-    }
-
     // repair waypoints after AI dies on ramp
     public void diedOnRamp()
     {
         repairWaypoints();
+        recalculateNextRandomWaypoints(2);
+    }
+
+    // recalculates the next n waypoints randomly
+    // called when the AI dies on ramp (usually their random waypoints are bad)
+    private void recalculateNextRandomWaypoints(int n)
+    {
+        int maxIter = Mathf.Min(waypointProgress + n, waypoints.Length);
+        for (int i = waypointProgress; i < maxIter; i++)
+        {
+            float r = Random.Range(0.2f, 0.8f);
+            Vector3 waypt = Vector3.Lerp(leftWaypoints[i].position, rightWaypoints[i].position, n);
+            waypoints[i] = waypt;
+        }
+        nextWaypoint = waypoints[waypointProgress];
+        System.Array.Copy(waypoints, closestWaypoints, waypoints.Length);
     }
 
     // creates waypoints for the whole track
@@ -168,10 +179,13 @@ public class PositionManager : MonoBehaviour {
     // Update waypoint progress and the next waypoint if this GameObject has reached nextWaypoint
     void updateWaypointProgress()
     {
-        if (hasReachedTarget(nextWaypoint, 10f))
+        if (hasReachedTarget(nextWaypoint, 12f))
         {
             nextWaypoint = waypoints[++waypointProgress];
-            print(gameObject.name + ": " + waypointProgress);
+            //if (isPlayer)
+            //{
+            //    print(gameObject.name + ": " + waypointProgress + ", next waypoint: " + nextWaypoint);
+            //}
         }
     }
 
@@ -294,7 +308,8 @@ public class PositionManager : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         updateWaypointProgress();
-        if (positionText != null && MyGameManager.getGameState() == GameManager.States.Race)
+        //if (positionText != null && MyGameManager.getGameState() == GameManager.States.Race)
+        if (positionText != null && finalPlace == Mathf.Infinity)
         {
             updatePositionDisplay();
         }
@@ -304,11 +319,31 @@ public class PositionManager : MonoBehaviour {
 		//}
 	}
 
+    public void setFinalPlace(int place)
+    {
+        finalPlace = place;
+    }
+
 	public void finalResults()
-	{
-		System.Array.Sort (runners, sortByPosition);
-		MyGameManager.finalResults (runners);
-	}
+    {
+        //System.Array.Sort(runners, sortByPosition);
+        //MyGameManager.finalResults(runners);
+        System.Array.Sort(runners, sortByFinalPositions);
+        MyGameManager.finalResults(runners);
+    }
+
+    static int sortByFinalPositions(PositionManager runner1, PositionManager runner2)
+    {
+        int ret = runner1.finalPlace.CompareTo(runner2.finalPlace);
+        if (ret != 0)
+        {
+            return ret;
+        }
+        else
+        {
+            return sortByPosition(runner1, runner2);
+        }
+    }
 
 	public void positions()
     {

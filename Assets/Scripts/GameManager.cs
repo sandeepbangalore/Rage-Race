@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour {
     private string playerSelectedName = null;  //BV
 	private bool homingBool = false;
 	private static GameManager _Instance = null;
+    private Timer1 timer;
 	public static GameManager Instance{
 		get{ 
 			if (_Instance == null) {
@@ -129,6 +130,8 @@ public class GameManager : MonoBehaviour {
 		PlayerPowerupScript playerPPS = playerGO.GetComponent<PlayerPowerupScript> ();
 		playerPPS.image1 = image1;
 		playerPPS.image2 = image2;
+
+        timer = GetComponent<Timer1>();
 	}
 
 	// Use this for initialization
@@ -166,6 +169,11 @@ public class GameManager : MonoBehaviour {
 	public void currentPositions(PositionManager[] runners){
 		gameCurrentPositions = runners;
 	}
+
+    public void stopTimer()
+    {
+        timer.Finish();
+    }
 
 	void printResults(){
 		if (!printed) {

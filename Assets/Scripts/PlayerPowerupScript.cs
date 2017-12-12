@@ -97,7 +97,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Fire1") || shouldUseAIpowerups.Contains(true)) {
 			//Debug.Log ("Fire1!!");
-			if (hasSlowDown && powerupSlots[0] == "SlowPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
+			if (hasSlowDown && powerupSlots[0] == "SlowPickup" && (AIscript == null || (shouldUseAIpowerups[0] || !slotsAvailable))) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation;
@@ -110,7 +110,7 @@ public class PlayerPowerupScript : MonoBehaviour {
                 ////Sound effect of dropping block
                 EventManager.TriggerEvent<BlockDropEvent, Vector3>(transform.position);
             }
-			if (hasGasPickup && powerupSlots[0] == "GasPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
+			if (hasGasPickup && powerupSlots[0] == "GasPickup" && (AIscript == null || (shouldUseAIpowerups[0] || !slotsAvailable))) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation;
@@ -156,7 +156,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 		}
 
 		if (Input.GetButtonDown ("Fire2") || shouldUseAIpowerups.Contains(true)) {
-			if (hasSlowDown && powerupSlots[1] == "SlowPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
+			if (hasSlowDown && powerupSlots[1] == "SlowPickup" && (AIscript == null || (shouldUseAIpowerups[0] || !slotsAvailable))) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation;
@@ -169,7 +169,7 @@ public class PlayerPowerupScript : MonoBehaviour {
                 ////Sound effect of dropping block
                 EventManager.TriggerEvent<BlockDropEvent, Vector3>(transform.position);
             }
-			if (hasGasPickup && powerupSlots[1] == "GasPickup" && (AIscript == null || shouldUseAIpowerups[0])) {
+			if (hasGasPickup && powerupSlots[1] == "GasPickup" && (AIscript == null || (shouldUseAIpowerups[0] || !slotsAvailable))) {
 				Vector3 pos = gameObject.transform.position;
 				Vector3 dir = gameObject.transform.forward;
 				Quaternion rot = gameObject.transform.rotation;
@@ -324,7 +324,7 @@ public class PlayerPowerupScript : MonoBehaviour {
 
 		if (other.gameObject.tag == "Powerup") {
 			EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
-			Debug.Log("Speedup");
+			//Debug.Log("Speedup");
 			if(moveScript != null) {
 				if(image1.sprite == default_sprite)
 					image1.sprite = speed_sprite;
@@ -430,12 +430,12 @@ public class PlayerPowerupScript : MonoBehaviour {
         {
             EventManager.TriggerEvent<PowerUpEvent, Vector3>(transform.position);
             boost = true;
-            Debug.Log("Hail Mary!");
+            //Debug.Log("Hail Mary!");
         }
 
         if (other.transform.gameObject.tag == "DeathTrigger")
         {
-            Debug.Log("FIRE FIRE FIRE!");
+            //Debug.Log("FIRE FIRE FIRE!");
             //gameObject.transform.position = GameObject.Find("RespawnPoint").transform.position;
             // respawn at closest respawn point
             System.Array.Sort(respawnPoints, (a, b) => ((transform.position - a.transform.position).magnitude).CompareTo((transform.position - b.transform.position).magnitude));

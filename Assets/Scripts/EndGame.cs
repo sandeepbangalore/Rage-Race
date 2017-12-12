@@ -6,6 +6,7 @@ public class EndGame : MonoBehaviour {
 	public PositionManager player = null;
 	public Canvas Finish = null;
 	private GameManager MyGameManager = null;
+    private int placeCount = 0;
 
 	// Use this for initialization
 	void Awake() {
@@ -14,7 +15,7 @@ public class EndGame : MonoBehaviour {
 	void Start () {
 		MyGameManager = GameManager.Instance;
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,20 +24,25 @@ public class EndGame : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		//Debug.Log("Entered");
-		if (other.tag == "Player" && MyGameManager.getGameState() == GameManager.States.Race) {
-		// Get lap number from game manager
-			Debug.Log("Entered");
+		if (other.tag == "Player" && MyGameManager.getGameState() == GameManager.States.Race)
+        {
+            StartCoroutine(gameFinish());
+            // Get lap number from game manager
+            Debug.Log("Entered");
 			Finish.enabled = true; 
 			Finish.GetComponent<Animator> ().SetTrigger ("Finish");
-            other.SendMessage("Finish");
-			player.finalResults ();
-			StartCoroutine (gameFinish ());
+            //other.SendMessage("Finish");
+            MyGameManager.stopTimer();
+            other.GetComponent<PositionManager>().setFinalPlace(++placeCount);
+            player.finalResults ();
 		}
-//        if(other.tag == "NPC")
-//        {
-//            other.SendMessage("Finish");
-//        }
-	}
+        else if (other.tag == "NPC")
+        {
+            other.GetComponent<AIController>().Invoke("stopRunning", 2f);
+            other.GetComponent<PositionManager>().setFinalPlace(++placeCount);
+        }
+
+    }
 
 
 	IEnumerator gameFinish()
